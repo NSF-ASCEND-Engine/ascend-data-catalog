@@ -17,6 +17,8 @@ Rows are grouped by state and Hilbert-sorted within each state, and each row has
 
 Common columns: `OCC_CLS` and `PRIM_OCC` (occupancy class and type), `PROP_ADDR`, `PROP_CITY`, `PROP_ST` (state name), `PROP_ZIP`, `FIPS`, `HEIGHT`, `SQMETERS`, `SQFEET`, `H_ADJ_ELEV` / `L_ADJ_ELEV` (adjacent ground elevation), `POP_MEDIAN` with `POP_CI95_LOWER` / `POP_CI95_UPPER` (null outside residential occupancy), `IMAGE_DATE`, `BUILD_ID`, `UUID`, `geometry` (WKB polygon). Definitions for every column are in `derived/usa_structures.json` under `table:columns`.
 
+### Python
+
 ```python
 import geopandas as gpd
 
@@ -32,6 +34,54 @@ SELECT OCC_CLS, count(*), sum(POP_MEDIAN)
 FROM '/project/cowy/data/fema-usa-structures/derived/usa_structures.parquet'
 WHERE bbox.xmin < -105.2 AND bbox.xmax > -105.3 AND bbox.ymin < 40.1 AND bbox.ymax > 39.9
 GROUP BY 1;
+```
+
+### Julia
+
+Packages: `DuckDB`, `DataFrames`. `geometry` comes back as WKB bytes.
+
+```julia
+using DuckDB, DataFrames
+
+path = "/project/cowy/data/fema-usa-structures/derived/usa_structures.parquet"
+con = DBInterface.connect(DuckDB.DB)
+df = DBInterface.execute(con, """
+    SELECT OCC_CLS, HEIGHT, SQMETERS, POP_MEDIAN, geometry
+    FROM '$path'
+    WHERE bbox.xmin < -105.2 AND bbox.xmax > -105.3 AND bbox.ymin < 40.1 AND bbox.ymax > 39.9
+    """) |> DataFrame
+```
+
+### R
+
+On MedicineBow, load R with `module load arcc/1.0 gcc/15.2.0` then `module load r/4.5.3`. The module's library has no packages, so install them once into your own library; Posit's RHEL 9 binaries avoid compiling:
+
+```r
+options(repos = c(CRAN = "https://p3m.dev/cran/__linux__/rhel9/latest"),
+        HTTPUserAgent = sprintf("R/%s R (%s)", getRversion(),
+            paste(getRversion(), R.version["platform"], R.version["arch"], R.version["os"])))
+install.packages(c("duckdb", "arrow", "dplyr"))
+```
+
+`geometry` comes back as a list of WKB raw vectors. `sf` and `terra` cannot read this file directly on MedicineBow: the cluster GDAL has no Parquet driver, and the `sf` binary needs system libraries the cluster lacks.
+
+```r
+library(duckdb)
+library(arrow)
+library(dplyr)
+
+path <- "/project/cowy/data/fema-usa-structures/derived/usa_structures.parquet"
+
+con <- dbConnect(duckdb())
+df <- dbGetQuery(con, sprintf("
+    SELECT OCC_CLS, HEIGHT, SQMETERS, POP_MEDIAN, geometry
+    FROM '%s'
+    WHERE bbox.xmin < -105.2 AND bbox.xmax > -105.3 AND bbox.ymin < 40.1 AND bbox.ymax > 39.9", path))
+
+wy <- open_dataset(path) |>
+    filter(PROP_ST == "Wyoming") |>
+    select(OCC_CLS, HEIGHT, SQMETERS) |>
+    collect()
 ```
 
 Alaska's footprints span the antimeridian, so a bbox query there needs two boxes, one on each side of ±180°.
