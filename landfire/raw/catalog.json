@@ -1,0 +1,580 @@
+{
+  "type": "Collection",
+  "id": "landfire-raw",
+  "stac_version": "1.1.0",
+  "description": "LANDFIRE (https://landfire.gov) CONUS product zips as downloaded, one asset per zip: LF2016-LF2025 fuel, vegetation, disturbance and terrain layers plus the annual and preliminary disturbance archives. Read-only.",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "cowy shared data"
+    },
+    {
+      "rel": "license",
+      "href": "https://landfire.gov/data/faq",
+      "type": "text/html",
+      "title": "LANDFIRE data use"
+    },
+    {
+      "rel": "parent",
+      "href": "../../raw.json",
+      "type": "application/json",
+      "title": "Raw"
+    }
+  ],
+  "stac_extensions": [
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "title": "LANDFIRE (raw)",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -128.38704,
+          22.4284,
+          -64.05392,
+          52.44091
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2016-01-01T00:00:00Z",
+          "2026-12-31T23:59:59Z"
+        ]
+      ]
+    }
+  },
+  "license": "other",
+  "keywords": [
+    "LANDFIRE",
+    "fuels",
+    "wildfire",
+    "terrain",
+    "CONUS"
+  ],
+  "providers": [
+    {
+      "name": "LANDFIRE",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://landfire.gov"
+    }
+  ],
+  "assets": {
+    "CONUSLimitedDisturbance_2023_Present": {
+      "href": "./CONUSLimitedDisturbance_2023_Present.zip",
+      "type": "application/zip",
+      "title": "CONUSLimitedDisturbance_2023_Present",
+      "file:size": 126793591,
+      "updated": "2026-09-11T16:36:49Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "CONUSPreliminaryDisturbance_2023_Present": {
+      "href": "./CONUSPreliminaryDisturbance_2023_Present.zip",
+      "type": "application/zip",
+      "title": "CONUSPreliminaryDisturbance_2023_Present",
+      "file:size": 223524553,
+      "updated": "2026-09-11T16:38:50Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "LF2016_FRG_CONUS": {
+      "href": "./LF2016_FRG_CONUS.zip",
+      "type": "application/zip",
+      "title": "LANDFIRE 2016 Remap Fire Regime Group (FRG) CONUS",
+      "file:size": 2002811220,
+      "updated": "2026-09-11T16:30:21Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "LF2016_FRI_CONUS": {
+      "href": "./LF2016_FRI_CONUS.zip",
+      "type": "application/zip",
+      "title": "LANDFIRE 2016 Remap Fire Return Interval (FRI) CONUS",
+      "file:size": 2002824954,
+      "updated": "2026-09-11T16:28:59Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "LF2016_NVC_CONUS": {
+      "href": "./LF2016_NVC_CONUS.zip",
+      "type": "application/zip",
+      "title": "LANDFIRE Remap 2016 National Vegetation Classification (NVC) CONUS",
+      "file:size": 3588675216,
+      "updated": "2026-09-11T16:55:46Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "LF2016_PFS_CONUS": {
+      "href": "./LF2016_PFS_CONUS.zip",
+      "type": "application/zip",
+      "title": "LANDFIRE 2016 Remap Percent Fire Severity (PFS) CONUS",
+      "file:size": 2002827368,
+      "updated": "2026-09-11T16:32:07Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "LF2020_Asp_CONUS": {
+      "href": "./LF2020_Asp_CONUS.zip",
+      "type": "application/zip",
+      "title": "LANDFIRE 2020 Aspect (Asp) CONUS",
+      "file:size": 8839412404,
+      "updated": "2026-09-11T20:07:00Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "LF2020_BPS_CONUS": {
+      "href": "./LF2020_BPS_CONUS.zip",
+      "type": "application/zip",
+      "title": "LANDFIRE 2020 Biophysical Settings (BPS) CONUS",
+      "file:size": 2002907990,
+      "updated": "2026-09-11T16:20:59Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "LF2020_Elev_CONUS": {
+      "href": "./LF2020_Elev_CONUS.zip",
+      "type": "application/zip",
+      "title": "LANDFIRE 2020 Elevation (Elev) CONUS",
+      "file:size": 9012617642,
+      "updated": "2026-09-11T20:02:22Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "LF2020_SlpD_CONUS": {
+      "href": "./LF2020_SlpD_CONUS.zip",
+      "type": "application/zip",
+      "title": "LANDFIRE 2020 Slope Degrees (SlpD) CONUS",
+      "file:size": 5213368733,
+      "updated": "2026-09-11T19:21:53Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "LF2020_SlpP_CONUS": {
+      "href": "./LF2020_SlpP_CONUS.zip",
+      "type": "application/zip",
+      "title": "LANDFIRE 2020 Slope Percent Rise (SlpP) CONUS",
+      "file:size": 6794634786,
+      "updated": "2026-09-11T19:49:32Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "LF2023_FCCS_CONUS": {
+      "href": "./LF2023_FCCS_CONUS.zip",
+      "type": "application/zip",
+      "title": "LANDFIRE 2023 Fuel Characteristic Classification System (FCCS) CONUS",
+      "file:size": 4610545742,
+      "updated": "2026-08-20T23:42:35Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "LF2023_Roads_CONUS": {
+      "href": "./LF2023_Roads_CONUS.zip",
+      "type": "application/zip",
+      "title": "LANDFIRE 2023 Operational Roads (Roads) CONUS",
+      "file:size": 539047331,
+      "updated": "2026-08-20T23:51:55Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "LF2024_CBD_CONUS": {
+      "href": "./LF2024_CBD_CONUS.zip",
+      "type": "application/zip",
+      "title": "LANDFIRE 2024 Forest Canopy Bulk Density (CBD) CONUS",
+      "file:size": 1932453529,
+      "updated": "2026-08-21T00:17:26Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "LF2024_CBH_CONUS": {
+      "href": "./LF2024_CBH_CONUS.zip",
+      "type": "application/zip",
+      "title": "LANDFIRE 2024 Forest Canopy Base Height (CBH) CONUS",
+      "file:size": 2388285120,
+      "updated": "2026-08-20T23:36:17Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "LF2024_CC_CONUS": {
+      "href": "./LF2024_CC_CONUS.zip",
+      "type": "application/zip",
+      "title": "LANDFIRE 2024 Forest Canopy Cover (CC) CONUS",
+      "file:size": 1986573231,
+      "updated": "2026-08-21T00:12:27Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "LF2024_CH_CONUS": {
+      "href": "./LF2024_CH_CONUS.zip",
+      "type": "application/zip",
+      "title": "LANDFIRE 2024 Forest Canopy Height (CH) CONUS",
+      "file:size": 1909386732,
+      "updated": "2026-08-21T00:17:39Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "LF2024_Dist24_CONUS": {
+      "href": "./LF2024_Dist24_CONUS.zip",
+      "type": "application/zip",
+      "title": "LANDFIRE Annual Disturbance CONUS 2024",
+      "file:size": 101972456,
+      "updated": "2026-09-11T16:32:01Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "LF2024_EVC_CONUS": {
+      "href": "./LF2024_EVC_CONUS.zip",
+      "type": "application/zip",
+      "title": "LANDFIRE 2024 Existing Vegetation Cover (EVC) CONUS",
+      "file:size": 9209843324,
+      "updated": "2026-08-21T00:43:40Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "LF2024_EVH_CONUS": {
+      "href": "./LF2024_EVH_CONUS.zip",
+      "type": "application/zip",
+      "title": "LANDFIRE 2024 Existing Vegetation Height (EVH) CONUS",
+      "file:size": 5899286638,
+      "updated": "2026-08-20T23:29:49Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "LF2024_EVT_CONUS": {
+      "href": "./LF2024_EVT_CONUS.zip",
+      "type": "application/zip",
+      "title": "LANDFIRE 2024 Existing Vegetation Type (EVT) CONUS",
+      "file:size": 3827119176,
+      "updated": "2026-08-21T00:06:44Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "LF2024_FBFM13_CONUS": {
+      "href": "./LF2024_FBFM13_CONUS.zip",
+      "type": "application/zip",
+      "title": "LANDFIRE 2024 Anderson Fire Behavior Fuel Model (FBFM13) CONUS",
+      "file:size": 2552370712,
+      "updated": "2026-08-20T23:35:58Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "LF2024_FBFM40_CONUS": {
+      "href": "./LF2024_FBFM40_CONUS.zip",
+      "type": "application/zip",
+      "title": "LANDFIRE 2024 Scott and Burgan Fire Behavior Fuel Model (FBFM40) CONUS",
+      "file:size": 3358372323,
+      "updated": "2026-08-20T21:23:07Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "LF2024_FDist_CONUS": {
+      "href": "./LF2024_FDist_CONUS.zip",
+      "type": "application/zip",
+      "title": "LANDFIRE 2024 Fuel Disturbance (FDist) CONUS",
+      "file:size": 400101255,
+      "updated": "2026-08-20T23:58:25Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "LF2024_FVC_CONUS": {
+      "href": "./LF2024_FVC_CONUS.zip",
+      "type": "application/zip",
+      "title": "LANDFIRE 2024 Fuel Vegetation Cover (FVC) CONUS",
+      "file:size": 4146626612,
+      "updated": "2026-08-20T23:40:57Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "LF2024_FVH_CONUS": {
+      "href": "./LF2024_FVH_CONUS.zip",
+      "type": "application/zip",
+      "title": "LANDFIRE 2024 Fuel Vegetation Height (FVH) CONUS",
+      "file:size": 3535211143,
+      "updated": "2026-08-20T21:27:46Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "LF2024_FVT_CONUS": {
+      "href": "./LF2024_FVT_CONUS.zip",
+      "type": "application/zip",
+      "title": "LANDFIRE 2024 Fuel Vegetation Type (FVT) CONUS",
+      "file:size": 3719631490,
+      "updated": "2026-08-20T21:27:43Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "LF2024_PDist24_CONUS": {
+      "href": "./LF2024_PDist24_CONUS.zip",
+      "type": "application/zip",
+      "title": "LANDFIRE Preliminary Annual Disturbance CONUS 2024",
+      "file:size": 99068255,
+      "updated": "2026-09-11T16:33:14Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "LF2024_SClass_CONUS": {
+      "href": "./LF2024_SClass_CONUS.zip",
+      "type": "application/zip",
+      "title": "LANDFIRE 2024 Succession Class (SClass) CONUS",
+      "file:size": 2758797609,
+      "updated": "2026-08-20T23:40:39Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "LF2024_VCC_CONUS": {
+      "href": "./LF2024_VCC_CONUS.zip",
+      "type": "application/zip",
+      "title": "LANDFIRE 2024 Vegetation Condition Class (VCC) CONUS",
+      "file:size": 1945210012,
+      "updated": "2026-08-21T00:14:10Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "LF2024_VDep_CONUS": {
+      "href": "./LF2024_VDep_CONUS.zip",
+      "type": "application/zip",
+      "title": "LANDFIRE 2024 Vegetation Departure (VDep) CONUS",
+      "file:size": 2347622056,
+      "updated": "2026-08-21T00:15:54Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "LF2025_CBD_CONUS": {
+      "href": "./LF2025_CBD_CONUS.zip",
+      "type": "application/zip",
+      "title": "LANDFIRE 2025 Forest Canopy Bulk Density (CBD) CONUS",
+      "file:size": 683870788,
+      "updated": "2026-09-11T15:28:23Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "LF2025_CBH_CONUS": {
+      "href": "./LF2025_CBH_CONUS.zip",
+      "type": "application/zip",
+      "title": "LANDFIRE 2025 Forest Canopy Base Height (CBH) CONUS",
+      "file:size": 804782294,
+      "updated": "2026-09-11T15:43:18Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "LF2025_CC_CONUS": {
+      "href": "./LF2025_CC_CONUS.zip",
+      "type": "application/zip",
+      "title": "LANDFIRE 2025 Forest Canopy Cover (CC) CONUS",
+      "file:size": 610166706,
+      "updated": "2026-09-11T15:40:10Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "LF2025_CH_CONUS": {
+      "href": "./LF2025_CH_CONUS.zip",
+      "type": "application/zip",
+      "title": "LANDFIRE 2025 Forest Canopy Height (CH) CONUS",
+      "file:size": 640541507,
+      "updated": "2026-09-11T15:41:34Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "LF2025_EVC_CONUS": {
+      "href": "./LF2025_EVC_CONUS.zip",
+      "type": "application/zip",
+      "title": "LANDFIRE 2025 Existing Vegetation Cover (EVC) CONUS",
+      "file:size": 3307702964,
+      "updated": "2026-09-11T16:12:37Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "LF2025_EVH_CONUS": {
+      "href": "./LF2025_EVH_CONUS.zip",
+      "type": "application/zip",
+      "title": "LANDFIRE 2025 Existing Vegetation Height (EVH) CONUS",
+      "file:size": 2194168379,
+      "updated": "2026-09-11T15:48:17Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "LF2025_EVT_CONUS": {
+      "href": "./LF2025_EVT_CONUS.zip",
+      "type": "application/zip",
+      "title": "LANDFIRE 2025 Existing Vegetation Type (EVT) CONUS",
+      "file:size": 1310896706,
+      "updated": "2026-09-11T15:12:33Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "LF2025_FBFM13_CONUS": {
+      "href": "./LF2025_FBFM13_CONUS.zip",
+      "type": "application/zip",
+      "title": "LANDFIRE 2025 Anderson Fire Behavior Fuel Model (FBFM13) CONUS",
+      "file:size": 874441260,
+      "updated": "2026-09-11T14:34:40Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "LF2025_FBFM40_CONUS": {
+      "href": "./LF2025_FBFM40_CONUS.zip",
+      "type": "application/zip",
+      "title": "LANDFIRE 2025 Scott and Burgan Fire Behavior Fuel Model (FBFM40) CONUS",
+      "file:size": 1228461021,
+      "updated": "2026-09-11T15:06:10Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "LF2025_FBFM40_ES26": {
+      "href": "./LF2025_FBFM40_ES26.zip",
+      "type": "application/zip",
+      "title": "LANDFIRE 2025 Update FBFM40 ES2026",
+      "file:size": 457143073,
+      "updated": "2026-09-11T16:46:57Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "LF2025_FBFM40_SP26": {
+      "href": "./LF2025_FBFM40_SP26.zip",
+      "type": "application/zip",
+      "title": "LANDFIRE 2025 Update FBFM40 SP2026",
+      "file:size": 824613103,
+      "updated": "2026-09-11T16:56:13Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "LF2025_FBFM40_SU26": {
+      "href": "./LF2025_FBFM40_SU26.zip",
+      "type": "application/zip",
+      "title": "LANDFIRE 2025 Update FBFM40 SU2026",
+      "file:size": 1051685343,
+      "updated": "2026-09-11T17:04:40Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "LF2025_FCCS_CONUS": {
+      "href": "./LF2025_FCCS_CONUS.zip",
+      "type": "application/zip",
+      "title": "LANDFIRE 2025 Fuel Characteristic Classification System (FCCS) CONUS",
+      "file:size": 1550303828,
+      "updated": "2026-09-11T16:01:23Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "LF2025_FDist_CONUS": {
+      "href": "./LF2025_FDist_CONUS.zip",
+      "type": "application/zip",
+      "title": "LANDFIRE 2025 Fuel Disturbance (FDist) CONUS",
+      "file:size": 148840292,
+      "updated": "2026-09-11T15:27:40Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "LF2025_FVC_CONUS": {
+      "href": "./LF2025_FVC_CONUS.zip",
+      "type": "application/zip",
+      "title": "LANDFIRE 2025 Fuel Vegetation Cover (FVC) CONUS",
+      "file:size": 1405890896,
+      "updated": "2026-09-11T15:17:36Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "LF2025_FVH_CONUS": {
+      "href": "./LF2025_FVH_CONUS.zip",
+      "type": "application/zip",
+      "title": "LANDFIRE 2025 Fuel Vegetation Height (FVH) CONUS",
+      "file:size": 1274103380,
+      "updated": "2026-09-11T15:10:45Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "LF2025_FVT_CONUS": {
+      "href": "./LF2025_FVT_CONUS.zip",
+      "type": "application/zip",
+      "title": "LANDFIRE 2025 Fuel Vegetation Type (FVT) CONUS",
+      "file:size": 1284842604,
+      "updated": "2026-09-11T15:09:49Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "LF2025_LDist25_CONUS": {
+      "href": "./LF2025_LDist25_CONUS.zip",
+      "type": "application/zip",
+      "title": "LANDFIRE Limited Annual Disturbance CONUS 2025",
+      "file:size": 44345908,
+      "updated": "2026-09-11T16:33:16Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "LF2025_PDist25_CONUS": {
+      "href": "./LF2025_PDist25_CONUS.zip",
+      "type": "application/zip",
+      "title": "LANDFIRE Preliminary Annual Disturbance CONUS 2025",
+      "file:size": 47601078,
+      "updated": "2026-09-11T16:33:36Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "USAnnualDisturbance_1999_present": {
+      "href": "./USAnnualDisturbance_1999_present.zip",
+      "type": "application/zip",
+      "title": "USAnnualDisturbance_1999_present",
+      "file:size": 1973800652,
+      "updated": "2026-09-11T18:46:52Z",
+      "roles": [
+        "data"
+      ]
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "type": "Catalog",
+  "id": "raw",
+  "stac_version": "1.1.0",
+  "description": "Vendor files as downloaded, one Collection per <source>/raw. Links are added by each <source>/scripts/build_catalog.py.",
+  "links": [
+    {
+      "rel": "root",
+      "href": "./catalog.json",
+      "type": "application/json",
+      "title": "cowy shared data"
+    },
+    {
+      "rel": "child",
+      "href": "./landfire/raw/catalog.json",
+      "type": "application/json",
+      "title": "LANDFIRE (raw)"
+    },
+    {
+      "rel": "child",
+      "href": "./fema-usa-structures/raw/catalog.json",
+      "type": "application/json",
+      "title": "FEMA USA Structures (raw)"
+    },
+    {
+      "rel": "parent",
+      "href": "./catalog.json",
+      "type": "application/json",
+      "title": "cowy shared data"
+    }
+  ],
+  "title": "Raw"
+}

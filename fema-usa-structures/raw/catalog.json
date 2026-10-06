@@ -1,0 +1,636 @@
+{
+  "type": "Collection",
+  "id": "fema-usa-structures-raw",
+  "stac_version": "1.1.0",
+  "description": "FEMA/ORNL USA Structures File Geodatabase zips as downloaded by `scripts/download_raw.sh` from the URLs in `scripts/urls.txt`, one asset per state or territory (50 states, DC, 5 territories; 2025 and 2026 deliverables). Read-only. The bbox is the union of the zips' FGDC bounding boxes, so it spans the antimeridian naively.",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "cowy shared data"
+    },
+    {
+      "rel": "license",
+      "href": "https://gis-fema.hub.arcgis.com/pages/usa-structures",
+      "type": "text/html",
+      "title": "USA Structures"
+    },
+    {
+      "rel": "parent",
+      "href": "../../raw.json",
+      "type": "application/json",
+      "title": "Raw"
+    }
+  ],
+  "stac_extensions": [
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "title": "FEMA USA Structures (raw)",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -176.682829669,
+          -14.363177477,
+          174.150481659,
+          71.36518186
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2000-01-01T00:00:00Z",
+          "2026-07-15T23:59:59Z"
+        ]
+      ]
+    }
+  },
+  "license": "other",
+  "keywords": [
+    "buildings",
+    "structures",
+    "footprints",
+    "FEMA"
+  ],
+  "providers": [
+    {
+      "name": "Oak Ridge National Laboratory",
+      "roles": [
+        "producer"
+      ],
+      "url": "https://www.ornl.gov"
+    },
+    {
+      "name": "FEMA",
+      "roles": [
+        "licensor",
+        "host"
+      ],
+      "url": "https://gis-fema.hub.arcgis.com/pages/usa-structures"
+    }
+  ],
+  "assets": {
+    "AK_Structures_20260913": {
+      "href": "./AK_Structures_20260913.zip",
+      "type": "application/zip",
+      "title": "AK_Structures",
+      "file:size": 65656567,
+      "updated": "2026-10-05T22:16:01.124799Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "AS_Structures_20260913": {
+      "href": "./AS_Structures_20260913.zip",
+      "type": "application/zip",
+      "title": "AS_Structures",
+      "file:size": 2397382,
+      "updated": "2026-10-05T22:16:00.163420Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "CT_Structures_20260913": {
+      "href": "./CT_Structures_20260913.zip",
+      "type": "application/zip",
+      "title": "CT_Structures",
+      "file:size": 239810605,
+      "updated": "2026-10-05T22:16:03.867617Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "DC_Structures_20260913": {
+      "href": "./DC_Structures_20260913.zip",
+      "type": "application/zip",
+      "title": "DC_Structures",
+      "file:size": 11977508,
+      "updated": "2026-10-05T22:16:02.713464Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "DE_Structures_20260913": {
+      "href": "./DE_Structures_20260913.zip",
+      "type": "application/zip",
+      "title": "DE_Structures",
+      "file:size": 80426972,
+      "updated": "2026-10-05T22:16:02.375867Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "Deliverable20250606AL": {
+      "href": "./Deliverable20250606AL.zip",
+      "type": "application/zip",
+      "title": "AL_Structures",
+      "file:size": 437192375,
+      "updated": "2026-10-05T22:16:10.259783Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "Deliverable20250606FL": {
+      "href": "./Deliverable20250606FL.zip",
+      "type": "application/zip",
+      "title": "FL_Structures",
+      "file:size": 1585581176,
+      "updated": "2026-10-05T22:16:32.937354Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "Deliverable20250606GA": {
+      "href": "./Deliverable20250606GA.zip",
+      "type": "application/zip",
+      "title": "GA_Structures",
+      "file:size": 698274519,
+      "updated": "2026-10-05T22:16:16.650701Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "Deliverable20250606LA": {
+      "href": "./Deliverable20250606LA.zip",
+      "type": "application/zip",
+      "title": "LA_Structures",
+      "file:size": 395320715,
+      "updated": "2026-10-05T22:16:32.850672Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "Deliverable20250606MS": {
+      "href": "./Deliverable20250606MS.zip",
+      "type": "application/zip",
+      "title": "MS_Structures",
+      "file:size": 278361935,
+      "updated": "2026-10-05T22:16:43.627199Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "Deliverable20250606NC": {
+      "href": "./Deliverable20250606NC.zip",
+      "type": "application/zip",
+      "title": "NC_Structures",
+      "file:size": 913283428,
+      "updated": "2026-10-05T22:17:10.949538Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "Deliverable20250606SC": {
+      "href": "./Deliverable20250606SC.zip",
+      "type": "application/zip",
+      "title": "SC_Structures",
+      "file:size": 416140868,
+      "updated": "2026-10-05T22:17:18.479861Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "Deliverable20250606TX": {
+      "href": "./Deliverable20250606TX.zip",
+      "type": "application/zip",
+      "title": "TX_Structures",
+      "file:size": 2429317258,
+      "updated": "2026-10-05T22:18:00.362971Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "Deliverable20250606VA": {
+      "href": "./Deliverable20250606VA.zip",
+      "type": "application/zip",
+      "title": "VA_Structures",
+      "file:size": 621324154,
+      "updated": "2026-10-05T22:17:36.437054Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "Deliverable20250913AR": {
+      "href": "./Deliverable20250913AR.zip",
+      "type": "application/zip",
+      "title": "AR_Structures",
+      "file:size": 373871634,
+      "updated": "2026-10-05T22:16:06.894648Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "Deliverable20250913AZ": {
+      "href": "./Deliverable20250913AZ.zip",
+      "type": "application/zip",
+      "title": "AZ_Structures",
+      "file:size": 600654937,
+      "updated": "2026-10-05T22:16:10.363893Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "Deliverable20250913CA": {
+      "href": "./Deliverable20250913CA.zip",
+      "type": "application/zip",
+      "title": "CA_Structures",
+      "file:size": 2190645592,
+      "updated": "2026-10-05T22:16:42.826124Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "Deliverable20250913CO": {
+      "href": "./Deliverable20250913CO.zip",
+      "type": "application/zip",
+      "title": "CO_Structures",
+      "file:size": 443052447,
+      "updated": "2026-10-05T22:16:09.087718Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "Deliverable20250913ID": {
+      "href": "./Deliverable20250913ID.zip",
+      "type": "application/zip",
+      "title": "ID_Structures",
+      "file:size": 181492619,
+      "updated": "2026-10-05T22:16:15.959409Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "Deliverable20250913IL": {
+      "href": "./Deliverable20250913IL.zip",
+      "type": "application/zip",
+      "title": "IL_Structures",
+      "file:size": 1077599387,
+      "updated": "2026-10-05T22:16:30.854526Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "Deliverable20250913IN": {
+      "href": "./Deliverable20250913IN.zip",
+      "type": "application/zip",
+      "title": "IN_Structures",
+      "file:size": 726440297,
+      "updated": "2026-10-05T22:16:26.610167Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "Deliverable20250913MA": {
+      "href": "./Deliverable20250913MA.zip",
+      "type": "application/zip",
+      "title": "MA_Structures",
+      "file:size": 412304401,
+      "updated": "2026-10-05T22:16:41.666211Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "Deliverable20250913MD": {
+      "href": "./Deliverable20250913MD.zip",
+      "type": "application/zip",
+      "title": "MD_Structures",
+      "file:size": 328496387,
+      "updated": "2026-10-05T22:16:36.322998Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "Deliverable20250913MO": {
+      "href": "./Deliverable20250913MO.zip",
+      "type": "application/zip",
+      "title": "MO_Structures",
+      "file:size": 676289684,
+      "updated": "2026-10-05T22:16:53.176799Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "Deliverable20250913NJ": {
+      "href": "./Deliverable20250913NJ.zip",
+      "type": "application/zip",
+      "title": "NJ_Structures",
+      "file:size": 536319667,
+      "updated": "2026-10-05T22:17:02.045017Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "Deliverable20250913NV": {
+      "href": "./Deliverable20250913NV.zip",
+      "type": "application/zip",
+      "title": "NV_Structures",
+      "file:size": 191309857,
+      "updated": "2026-10-05T22:16:51.740266Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "Deliverable20250913OH": {
+      "href": "./Deliverable20250913OH.zip",
+      "type": "application/zip",
+      "title": "OH_Structures",
+      "file:size": 1239083772,
+      "updated": "2026-10-05T22:17:22.647497Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "Deliverable20250913OK": {
+      "href": "./Deliverable20250913OK.zip",
+      "type": "application/zip",
+      "title": "OK_Structures",
+      "file:size": 454037546,
+      "updated": "2026-10-05T22:17:08.825389Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "Deliverable20250913PA": {
+      "href": "./Deliverable20250913PA.zip",
+      "type": "application/zip",
+      "title": "PA_Structures",
+      "file:size": 937234374,
+      "updated": "2026-10-05T22:17:22.310324Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "GU_Structures_20260913": {
+      "href": "./GU_Structures_20260913.zip",
+      "type": "application/zip",
+      "title": "GU_Structures",
+      "file:size": 7532584,
+      "updated": "2026-10-05T22:16:07.489057Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "HI_Structures_20260913": {
+      "href": "./HI_Structures_20260913.zip",
+      "type": "application/zip",
+      "title": "HI_Structures",
+      "file:size": 76240564,
+      "updated": "2026-10-05T22:16:09.873118Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "IA_Structures_20260913": {
+      "href": "./IA_Structures_20260913.zip",
+      "type": "application/zip",
+      "title": "IA_Structures",
+      "file:size": 428762152,
+      "updated": "2026-10-05T22:16:24.539215Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "KS_Structures_20260913": {
+      "href": "./KS_Structures_20260913.zip",
+      "type": "application/zip",
+      "title": "KS_Structures",
+      "file:size": 337459569,
+      "updated": "2026-10-05T22:16:23.930698Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "KY_Structures_20260913": {
+      "href": "./KY_Structures_20260913.zip",
+      "type": "application/zip",
+      "title": "KY_Structures",
+      "file:size": 558786898,
+      "updated": "2026-10-05T22:16:28.978475Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "ME_Structures_20260913": {
+      "href": "./ME_Structures_20260913.zip",
+      "type": "application/zip",
+      "title": "ME_Structures",
+      "file:size": 170209514,
+      "updated": "2026-10-05T22:16:31.283720Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "MI_Structures_20260913": {
+      "href": "./MI_Structures_20260913.zip",
+      "type": "application/zip",
+      "title": "MI_Structures",
+      "file:size": 953750402,
+      "updated": "2026-10-05T22:16:54.052574Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "MN_Structures_20260913": {
+      "href": "./MN_Structures_20260913.zip",
+      "type": "application/zip",
+      "title": "MN_Structures",
+      "file:size": 578950106,
+      "updated": "2026-10-05T22:16:45.543562Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "MP_Structures_20260913": {
+      "href": "./MP_Structures_20260913.zip",
+      "type": "application/zip",
+      "title": "MP_Structures",
+      "file:size": 2098342,
+      "updated": "2026-10-05T22:16:59.316401Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "MT_Structures_20260913": {
+      "href": "./MT_Structures_20260913.zip",
+      "type": "application/zip",
+      "title": "MT_Structures",
+      "file:size": 173088786,
+      "updated": "2026-10-05T22:16:46.811861Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "ND_Structures_20260913": {
+      "href": "./ND_Structures_20260913.zip",
+      "type": "application/zip",
+      "title": "ND_Structures",
+      "file:size": 99036418,
+      "updated": "2026-10-05T22:16:57.216590Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "NE_Structures_20260913": {
+      "href": "./NE_Structures_20260913.zip",
+      "type": "application/zip",
+      "title": "NE_Structures",
+      "file:size": 241847194,
+      "updated": "2026-10-05T22:16:51.673851Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "NH_Structures_20260913": {
+      "href": "./NH_Structures_20260913.zip",
+      "type": "application/zip",
+      "title": "NH_Structures",
+      "file:size": 108742264,
+      "updated": "2026-10-05T22:16:51.720094Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "NM_Structures_20260913": {
+      "href": "./NM_Structures_20260913.zip",
+      "type": "application/zip",
+      "title": "MN_Structures",
+      "file:size": 234502090,
+      "updated": "2026-10-05T22:16:57.233665Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "NY_Structures_20260913": {
+      "href": "./NY_Structures_20260913.zip",
+      "type": "application/zip",
+      "title": "NY_Structures",
+      "file:size": 1004387741,
+      "updated": "2026-10-05T22:17:12.317248Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "OR_Structures_20260913": {
+      "href": "./OR_Structures_20260913.zip",
+      "type": "application/zip",
+      "title": "OR_Structures",
+      "file:size": 340342681,
+      "updated": "2026-10-05T22:17:07.751535Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "PR_Structures_20260913": {
+      "href": "./PR_Structures_20260913.zip",
+      "type": "application/zip",
+      "title": "PR_Structures",
+      "file:size": 212477595,
+      "updated": "2026-10-05T22:17:11.513767Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "RI_Structures_20260913": {
+      "href": "./RI_Structures_20260913.zip",
+      "type": "application/zip",
+      "title": "RI_Structures",
+      "file:size": 70502655,
+      "updated": "2026-10-05T22:17:10.166518Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "SD_Structures_20260913": {
+      "href": "./SD_Structures_20260913.zip",
+      "type": "application/zip",
+      "title": "SD_Structures",
+      "file:size": 126621383,
+      "updated": "2026-10-05T22:17:14.744895Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "TN_Structures_20260913": {
+      "href": "./TN_Structures_20260913.zip",
+      "type": "application/zip",
+      "title": "TN_Structures",
+      "file:size": 757507428,
+      "updated": "2026-10-05T22:17:30.138996Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "UT_Structures_20260913": {
+      "href": "./UT_Structures_20260913.zip",
+      "type": "application/zip",
+      "title": "UT_Structures",
+      "file:size": 238560479,
+      "updated": "2026-10-05T22:17:20.838790Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "VI_Structures_20260913": {
+      "href": "./VI_Structures_20260913.zip",
+      "type": "application/zip",
+      "title": "VI_Structures",
+      "file:size": 6089072,
+      "updated": "2026-10-05T22:17:24.488667Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "VT_Structures_20260913": {
+      "href": "./VT_Structures_20260913.zip",
+      "type": "application/zip",
+      "title": "VT_Structures",
+      "file:size": 78697705,
+      "updated": "2026-10-05T22:17:24.461457Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "WA_Structures_20260913": {
+      "href": "./WA_Structures_20260913.zip",
+      "type": "application/zip",
+      "title": "WA_Structures",
+      "file:size": 595321213,
+      "updated": "2026-10-05T22:17:36.046694Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "WI_Structures_20260913": {
+      "href": "./WI_Structures_20260913.zip",
+      "type": "application/zip",
+      "title": "WI_Structures",
+      "file:size": 611972069,
+      "updated": "2026-10-05T22:17:37.828896Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "WV_Structures_20260913": {
+      "href": "./WV_Structures_20260913.zip",
+      "type": "application/zip",
+      "title": "WV_Structures",
+      "file:size": 223904521,
+      "updated": "2026-10-05T22:17:29.248611Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "WY_Structures_20260913": {
+      "href": "./WY_Structures_20260913.zip",
+      "type": "application/zip",
+      "title": "WY_Structures",
+      "file:size": 80529883,
+      "updated": "2026-10-05T22:17:34.211543Z",
+      "roles": [
+        "data"
+      ]
+    }
+  }
+}

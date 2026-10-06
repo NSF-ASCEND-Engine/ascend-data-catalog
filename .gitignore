@@ -1,12 +1,14 @@
-# Track only text: README, catalog builder, STAC JSON, and <source>/scripts
+# Track only text: READMEs, STAC JSON, and <source>/scripts
 *
 !*/
 *.zarr/
 !.gitignore
 !README.md
-!build_catalog.py
+!*/README.md
 !catalog.json
-!*/catalog.json
+!raw.json
+!derived.json
+!*/raw/catalog.json
 !*/derived/*.json
 !*/scripts/**
 *.out
