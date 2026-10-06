@@ -1,0 +1,411 @@
+{
+  "type": "Collection",
+  "id": "lf2025-fuels-terrain",
+  "stac_version": "1.1.0",
+  "description": "23 LANDFIRE CONUS layers on one 30 m EPSG:5070 grid (101538 x 156336) in a single Zarr v3 store: the LF2025 fuel, vegetation and disturbance layers plus LF2020 terrain (Elev, SlpD, SlpP, Asp), which LANDFIRE does not reissue each release. Arrays are named by bare product code. LANDFIRE value-attribute tables are embedded in each array's `attribute_table` attribute. Built by `landfire/scripts/landfire_to_zarr.py`.",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "cowy shared data"
+    },
+    {
+      "rel": "license",
+      "href": "https://landfire.gov/data/faq",
+      "type": "text/html",
+      "title": "LANDFIRE data use"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "LANDFIRE"
+    }
+  ],
+  "stac_extensions": [
+    "https://stac-extensions.github.io/datacube/v2.2.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/xarray-assets/v1.0.0/schema.json"
+  ],
+  "cube:dimensions": {
+    "x": {
+      "type": "spatial",
+      "axis": "x",
+      "extent": [
+        -2362425.0,
+        2327655.0
+      ],
+      "step": 30.0,
+      "reference_system": 5070
+    },
+    "y": {
+      "type": "spatial",
+      "axis": "y",
+      "extent": [
+        221265.0,
+        3267405.0
+      ],
+      "step": -30.0,
+      "reference_system": 5070
+    }
+  },
+  "cube:variables": {
+    "Asp": {
+      "dimensions": [
+        "y",
+        "x"
+      ],
+      "type": "data",
+      "description": "LANDFIRE 2020 Aspect (Asp) CONUS",
+      "data_type": "int16",
+      "landfire:product": "LF2020_Asp_CONUS",
+      "landfire:release": "LF2020",
+      "nodata": -9999
+    },
+    "CBD": {
+      "dimensions": [
+        "y",
+        "x"
+      ],
+      "type": "data",
+      "description": "LANDFIRE 2025 Forest Canopy Bulk Density (CBD) CONUS",
+      "data_type": "int16",
+      "landfire:product": "LF2025_CBD_CONUS",
+      "landfire:release": "LF2025",
+      "nodata": 32767
+    },
+    "CBH": {
+      "dimensions": [
+        "y",
+        "x"
+      ],
+      "type": "data",
+      "description": "LANDFIRE 2025 Forest Canopy Base Height (CBH) CONUS",
+      "data_type": "int16",
+      "landfire:product": "LF2025_CBH_CONUS",
+      "landfire:release": "LF2025",
+      "nodata": 32767
+    },
+    "CC": {
+      "dimensions": [
+        "y",
+        "x"
+      ],
+      "type": "data",
+      "description": "LANDFIRE 2025 Forest Canopy Cover (CC) CONUS",
+      "data_type": "int16",
+      "landfire:product": "LF2025_CC_CONUS",
+      "landfire:release": "LF2025",
+      "nodata": 32767
+    },
+    "CH": {
+      "dimensions": [
+        "y",
+        "x"
+      ],
+      "type": "data",
+      "description": "LANDFIRE 2025 Forest Canopy Height (CH) CONUS",
+      "data_type": "int16",
+      "landfire:product": "LF2025_CH_CONUS",
+      "landfire:release": "LF2025",
+      "nodata": 32767
+    },
+    "EVC": {
+      "dimensions": [
+        "y",
+        "x"
+      ],
+      "type": "data",
+      "description": "LANDFIRE 2025 Existing Vegetation Cover (EVC) CONUS",
+      "data_type": "int16",
+      "landfire:product": "LF2025_EVC_CONUS",
+      "landfire:release": "LF2025",
+      "nodata": 32767
+    },
+    "EVH": {
+      "dimensions": [
+        "y",
+        "x"
+      ],
+      "type": "data",
+      "description": "LANDFIRE 2025 Existing Vegetation Height (EVH) CONUS",
+      "data_type": "int16",
+      "landfire:product": "LF2025_EVH_CONUS",
+      "landfire:release": "LF2025",
+      "nodata": 32767
+    },
+    "EVT": {
+      "dimensions": [
+        "y",
+        "x"
+      ],
+      "type": "data",
+      "description": "LANDFIRE 2025 Existing Vegetation Type (EVT) CONUS",
+      "data_type": "int16",
+      "landfire:product": "LF2025_EVT_CONUS",
+      "landfire:release": "LF2025",
+      "nodata": 32767
+    },
+    "Elev": {
+      "dimensions": [
+        "y",
+        "x"
+      ],
+      "type": "data",
+      "description": "LANDFIRE 2020 Elevation (Elev) CONUS",
+      "data_type": "int16",
+      "landfire:product": "LF2020_Elev_CONUS",
+      "landfire:release": "LF2020",
+      "nodata": -9999
+    },
+    "FBFM13": {
+      "dimensions": [
+        "y",
+        "x"
+      ],
+      "type": "data",
+      "description": "LANDFIRE 2025 Anderson Fire Behavior Fuel Model (FBFM13) CONUS",
+      "data_type": "int16",
+      "landfire:product": "LF2025_FBFM13_CONUS",
+      "landfire:release": "LF2025",
+      "nodata": 32767
+    },
+    "FBFM40": {
+      "dimensions": [
+        "y",
+        "x"
+      ],
+      "type": "data",
+      "description": "LANDFIRE 2025 Scott and Burgan Fire Behavior Fuel Model (FBFM40) CONUS",
+      "data_type": "int16",
+      "landfire:product": "LF2025_FBFM40_CONUS",
+      "landfire:release": "LF2025",
+      "nodata": 32767
+    },
+    "FBFM40_ES26": {
+      "dimensions": [
+        "y",
+        "x"
+      ],
+      "type": "data",
+      "description": "LANDFIRE 2025 Update FBFM40 ES2026",
+      "data_type": "int16",
+      "landfire:product": "LF2025_FBFM40_ES26",
+      "landfire:release": "LF2025",
+      "nodata": -32768
+    },
+    "FBFM40_SP26": {
+      "dimensions": [
+        "y",
+        "x"
+      ],
+      "type": "data",
+      "description": "LANDFIRE 2025 Update FBFM40 SP2026",
+      "data_type": "int16",
+      "landfire:product": "LF2025_FBFM40_SP26",
+      "landfire:release": "LF2025",
+      "nodata": -32768
+    },
+    "FBFM40_SU26": {
+      "dimensions": [
+        "y",
+        "x"
+      ],
+      "type": "data",
+      "description": "LANDFIRE 2025 Update FBFM40 SU2026",
+      "data_type": "int16",
+      "landfire:product": "LF2025_FBFM40_SU26",
+      "landfire:release": "LF2025",
+      "nodata": -32768
+    },
+    "FCCS": {
+      "dimensions": [
+        "y",
+        "x"
+      ],
+      "type": "data",
+      "description": "LANDFIRE 2025 Fuel Characteristic Classification System (FCCS) CONUS",
+      "data_type": "int32",
+      "landfire:product": "LF2025_FCCS_CONUS",
+      "landfire:release": "LF2025",
+      "nodata": 2147483647
+    },
+    "FDist": {
+      "dimensions": [
+        "y",
+        "x"
+      ],
+      "type": "data",
+      "description": "LANDFIRE 2025 Fuel Disturbance (FDist) CONUS",
+      "data_type": "int16",
+      "landfire:product": "LF2025_FDist_CONUS",
+      "landfire:release": "LF2025",
+      "nodata": 32767
+    },
+    "FVC": {
+      "dimensions": [
+        "y",
+        "x"
+      ],
+      "type": "data",
+      "description": "LANDFIRE 2025 Fuel Vegetation Cover (FVC) CONUS",
+      "data_type": "int16",
+      "landfire:product": "LF2025_FVC_CONUS",
+      "landfire:release": "LF2025",
+      "nodata": 32767
+    },
+    "FVH": {
+      "dimensions": [
+        "y",
+        "x"
+      ],
+      "type": "data",
+      "description": "LANDFIRE 2025 Fuel Vegetation Height (FVH) CONUS",
+      "data_type": "int16",
+      "landfire:product": "LF2025_FVH_CONUS",
+      "landfire:release": "LF2025",
+      "nodata": 32767
+    },
+    "FVT": {
+      "dimensions": [
+        "y",
+        "x"
+      ],
+      "type": "data",
+      "description": "LANDFIRE 2025 Fuel Vegetation Type (FVT) CONUS",
+      "data_type": "int16",
+      "landfire:product": "LF2025_FVT_CONUS",
+      "landfire:release": "LF2025",
+      "nodata": 32767
+    },
+    "LDist25": {
+      "dimensions": [
+        "y",
+        "x"
+      ],
+      "type": "data",
+      "description": "LANDFIRE Limited Annual Disturbance CONUS 2025",
+      "data_type": "int16",
+      "landfire:product": "LF2025_LDist25_CONUS",
+      "landfire:release": "LF2025",
+      "nodata": 32767
+    },
+    "PDist25": {
+      "dimensions": [
+        "y",
+        "x"
+      ],
+      "type": "data",
+      "description": "LANDFIRE Preliminary Annual Disturbance CONUS 2025",
+      "data_type": "int16",
+      "landfire:product": "LF2025_PDist25_CONUS",
+      "landfire:release": "LF2025",
+      "nodata": 32767
+    },
+    "SlpD": {
+      "dimensions": [
+        "y",
+        "x"
+      ],
+      "type": "data",
+      "description": "LANDFIRE 2020 Slope Degrees (SlpD) CONUS",
+      "data_type": "int16",
+      "landfire:product": "LF2020_SlpD_CONUS",
+      "landfire:release": "LF2020"
+    },
+    "SlpP": {
+      "dimensions": [
+        "y",
+        "x"
+      ],
+      "type": "data",
+      "description": "LANDFIRE 2020 Slope Percent Rise (SlpP) CONUS",
+      "data_type": "int16",
+      "landfire:product": "LF2020_SlpP_CONUS",
+      "landfire:release": "LF2020"
+    }
+  },
+  "title": "LANDFIRE LF2025 fuels + LF2020 terrain",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -128.3872854191448,
+          22.428339483833284,
+          -64.05405005567833,
+          52.48155967279973
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2020-01-01T00:00:00Z",
+          "2025-12-31T23:59:59Z"
+        ]
+      ]
+    }
+  },
+  "license": "other",
+  "keywords": [
+    "LANDFIRE",
+    "fuels",
+    "wildfire",
+    "terrain",
+    "CONUS",
+    "zarr"
+  ],
+  "providers": [
+    {
+      "name": "LANDFIRE",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://landfire.gov"
+    },
+    {
+      "name": "cowy",
+      "roles": [
+        "processor",
+        "host"
+      ]
+    }
+  ],
+  "assets": {
+    "zarr": {
+      "href": "./lf2025_fuels_terrain.zarr",
+      "type": "application/vnd.zarr; version=3",
+      "title": "lf2025_fuels_terrain.zarr",
+      "proj:code": "EPSG:5070",
+      "proj:shape": [
+        101538,
+        156336
+      ],
+      "proj:transform": [
+        30.0,
+        0.0,
+        -2362425.0,
+        0.0,
+        -30.0,
+        3267405.0
+      ],
+      "proj:bbox": [
+        -2362425.0,
+        221265.0,
+        2327655.0,
+        3267405.0
+      ],
+      "xarray:open_kwargs": {
+        "engine": "zarr",
+        "consolidated": true
+      },
+      "updated": "2026-09-21T18:00:54.848122Z",
+      "roles": [
+        "data",
+        "zarr"
+      ]
+    }
+  }
+}

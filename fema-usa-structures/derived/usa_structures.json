@@ -1,0 +1,325 @@
+{
+  "type": "Collection",
+  "id": "usa-structures",
+  "stac_version": "1.1.0",
+  "description": "146,381,550 building footprints (structures over 450 sq ft) for the 50 states, DC and five territories, from the FEMA/ORNL USA Structures state File Geodatabases in `fema-usa-structures/raw`, merged into one GeoParquet 1.1 file. Attributes include occupancy class, address, height, area, adjacent ground elevation and estimated population. Rows are Hilbert-sorted within each state and carry a `bbox` covering column, so bbox filters in DuckDB, GeoPandas and GDAL skip row groups outside the query. Built by `fema-usa-structures/scripts/build_geoparquet.py`.",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "cowy shared data"
+    },
+    {
+      "rel": "license",
+      "href": "https://gis-fema.hub.arcgis.com/pages/usa-structures",
+      "type": "text/html",
+      "title": "USA Structures"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "FEMA USA Structures"
+    }
+  ],
+  "stac_extensions": [
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "table:columns": [
+    {
+      "name": "Shape_Area",
+      "type": "double",
+      "description": "Area of feature in internal units squared."
+    },
+    {
+      "name": "Shape_Length",
+      "type": "double",
+      "description": "Length of feature in internal units."
+    },
+    {
+      "name": "BUILD_ID",
+      "type": "int32",
+      "description": "Unique ID for each feature."
+    },
+    {
+      "name": "OCC_CLS",
+      "type": "large_string",
+      "description": "This identifies the top level building occupancy class as defined by Locations: Building Occupancy Classification; FEMA Data Standard; July 31, 2018."
+    },
+    {
+      "name": "PRIM_OCC",
+      "type": "large_string",
+      "description": "This identifies the primary descriptor for a building's usage for each top level building occupancy class as defined by Locations: Building Occupancy Classification; FEMA Data Standard; July 31, 2018."
+    },
+    {
+      "name": "SEC_OCC",
+      "type": "large_string",
+      "description": "This describes the range of units within Multi Family Dwelling and Temporary Lodging descriptors for Residential building occupancy class as defined by Locations: Building Occupancy Classification; FEMA Data Standard; July 31, 2018."
+    },
+    {
+      "name": "PROP_ADDR",
+      "type": "large_string",
+      "description": "Primary street address for a structure (i.e. 5th Avenue and Main Street)."
+    },
+    {
+      "name": "PROP_CITY",
+      "type": "large_string",
+      "description": "City name."
+    },
+    {
+      "name": "PROP_ST",
+      "type": "large_string",
+      "description": "State name."
+    },
+    {
+      "name": "PROP_ZIP",
+      "type": "large_string",
+      "description": "Zip code (5 digit)."
+    },
+    {
+      "name": "PROP_CNTY",
+      "type": "large_string",
+      "description": "County Name."
+    },
+    {
+      "name": "OUTBLDG",
+      "type": "large_string",
+      "description": "A non-primary structure or outbuilding such as a garage, shed or other accessory building."
+    },
+    {
+      "name": "HEIGHT",
+      "type": "float",
+      "description": "This is a measure of the height (in meters) of the structure as determined from LiDAR or other source data."
+    },
+    {
+      "name": "SQMETERS",
+      "type": "float",
+      "description": "This is the two-dimensional area of the building in square meters."
+    },
+    {
+      "name": "SQFEET",
+      "type": "float",
+      "description": "This is the two-dimensional area of the building in square feet."
+    },
+    {
+      "name": "H_ADJ_ELEV",
+      "type": "float",
+      "description": "This is the highest elevation (in meters) of the ground adjacent to the structure as estimated from available elevation data."
+    },
+    {
+      "name": "L_ADJ_ELEV",
+      "type": "float",
+      "description": "This is the lowest elevation (in meters) of the ground adjacent to the structure as estimated from available elevation data."
+    },
+    {
+      "name": "FIPS",
+      "type": "large_string",
+      "description": "US County Federal Information Processing Standards (FIPS) Code (5 digit)."
+    },
+    {
+      "name": "CENSUSCODE",
+      "type": "large_string",
+      "description": "Census tract identifier; a concatenation of current state Federal Information Processing Series (FIPS) code, county FIPS code, and census tract code."
+    },
+    {
+      "name": "PROD_DATE",
+      "type": "timestamp[ms, tz=UTC]",
+      "description": "The date that the structure/feature was captured using automated methods (MM/DD/YYYY)."
+    },
+    {
+      "name": "SOURCE",
+      "type": "large_string",
+      "description": "This is the name of the contractor or the government agency that created the feature."
+    },
+    {
+      "name": "USNG",
+      "type": "large_string",
+      "description": "United States National Grid Coordinate."
+    },
+    {
+      "name": "LONGITUDE",
+      "type": "double",
+      "description": "Longitude of located point on centroid of structure in millionths of decimal degrees."
+    },
+    {
+      "name": "LATITUDE",
+      "type": "double",
+      "description": "Latitude of located point on centroid of structure in millionths of decimal degrees."
+    },
+    {
+      "name": "IMAGE_NAME",
+      "type": "large_string",
+      "description": "The catalog ID from the Maxar commercial imagery, or the name of the image from National Agriculture Imagery Program (NAIP) imagery used to extract structures. LiDAR-derived footprints provided by the National Geospatial Intelligence Agency (NGA). For LiDAR-derived footprints, the first portion of the name ('LiXXX') denotes the Homeland Infrastructure Foundation-Level Data (HIFLD) production code while the latter portion is the city/project covered."
+    },
+    {
+      "name": "IMAGE_DATE",
+      "type": "timestamp[ms, tz=UTC]",
+      "description": "This is the date of the imagery or LiDAR from which the building outline was captured (MM/DD/YYYY)."
+    },
+    {
+      "name": "VAL_METHOD",
+      "type": "large_string",
+      "description": "Methodology used to validate building outline as a true positive."
+    },
+    {
+      "name": "REMARKS",
+      "type": "large_string",
+      "description": "This is comments that cannot be captured by existing data fields."
+    },
+    {
+      "name": "UUID",
+      "type": "large_string",
+      "description": "Universally Unique Identifier (method 4); a 128-bit id label coded in hexadecimal as a string in '{8-4-4-4-12}' or '8-4-4-4-12' format. Each structure within the complete USA Structures database will have a unique UUID. https://datatracker.ietf.org/doc/html/rfc4122.html"
+    },
+    {
+      "name": "B_CODE",
+      "type": "large_string",
+      "description": "Name of building code standard likely in effect during construction."
+    },
+    {
+      "name": "POP_CI95_UPPER",
+      "type": "double",
+      "description": "Upper bound (percentile 97.5) of 95% Coverage Interval on building population estimate."
+    },
+    {
+      "name": "POP_MEDIAN",
+      "type": "double",
+      "description": "Median (percentile 50) building population estimate."
+    },
+    {
+      "name": "POP_CI95_LOWER",
+      "type": "double",
+      "description": "Lower bound (percentile 2.5) of 95% Coverage Interval on building population estimate."
+    },
+    {
+      "name": "geometry",
+      "type": "binary",
+      "description": "Building footprint, WKB-encoded."
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>",
+      "description": "Footprint bounding box (GeoParquet 1.1 covering column) for bbox filtering."
+    }
+  ],
+  "table:primary_geometry": "geometry",
+  "table:row_count": 146381550,
+  "title": "FEMA USA Structures",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -180.0,
+          -14.363177477000022,
+          180.0,
+          71.36518186
+        ],
+        [
+          -124.73692301199998,
+          24.467879196000013,
+          -66.95042632600001,
+          49.36835554800001
+        ],
+        [
+          173.15996558100005,
+          51.83123138600001,
+          -130.01773977300002,
+          71.36518186
+        ],
+        [
+          -171.088269171,
+          -14.363177477000022,
+          -169.42060225,
+          -11.055852340000001
+        ],
+        [
+          144.61947542300004,
+          13.23767032699999,
+          144.94659465300003,
+          13.653434828999991
+        ],
+        [
+          -160.26476195,
+          18.920892655999978,
+          -154.815002151,
+          22.23193115700002
+        ],
+        [
+          145.1326226,
+          14.113336816000015,
+          146.06182959,
+          18.126500013999987
+        ],
+        [
+          -67.94172250899999,
+          17.885906897999973,
+          -65.22751953900001,
+          18.51515634399999
+        ],
+        [
+          -65.03973137499997,
+          17.680648433999977,
+          -64.58355227099997,
+          18.38106041399999
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2000-01-01T00:00:00Z",
+          "2026-07-15T00:00:00Z"
+        ]
+      ]
+    }
+  },
+  "license": "other",
+  "keywords": [
+    "buildings",
+    "structures",
+    "footprints",
+    "FEMA",
+    "exposure",
+    "geoparquet"
+  ],
+  "providers": [
+    {
+      "name": "Oak Ridge National Laboratory",
+      "roles": [
+        "producer"
+      ],
+      "url": "https://www.ornl.gov"
+    },
+    {
+      "name": "FEMA",
+      "roles": [
+        "licensor",
+        "host"
+      ],
+      "url": "https://gis-fema.hub.arcgis.com/pages/usa-structures"
+    },
+    {
+      "name": "cowy",
+      "roles": [
+        "processor",
+        "host"
+      ]
+    }
+  ],
+  "assets": {
+    "parquet": {
+      "href": "./usa_structures.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "usa_structures.parquet",
+      "proj:code": "EPSG:4326",
+      "file:size": 29075371725,
+      "updated": "2026-10-05T22:28:11.424408Z",
+      "roles": [
+        "data"
+      ]
+    }
+  }
+}
