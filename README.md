@@ -25,7 +25,7 @@ A standard template is as follows:
 
 ```
 ascend-data-catalog/
-    catalog.json                        # Catalog (cowy-data root)
+    catalog.json                        # Catalog (ascend-data-catalog root)
     raw.json                            # Catalog of every <source>/raw/catalog.json
     derived.json                        # Catalog of every <source>/derived/catalog.json
     <source>/

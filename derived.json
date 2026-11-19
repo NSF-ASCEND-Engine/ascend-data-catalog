@@ -8,7 +8,7 @@
       "rel": "root",
       "href": "./catalog.json",
       "type": "application/json",
-      "title": "cowy shared data"
+      "title": "ascend-data-catalog"
     },
     {
       "rel": "child",
@@ -32,7 +32,7 @@
       "rel": "parent",
       "href": "./catalog.json",
       "type": "application/json",
-      "title": "cowy shared data"
+      "title": "ascend-data-catalog"
     }
   ],
   "title": "Derived"
