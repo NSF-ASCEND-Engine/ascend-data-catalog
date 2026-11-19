@@ -1,0 +1,88 @@
+{
+  "type": "Collection",
+  "id": "silvis-wui-raw",
+  "stac_version": "1.1.0",
+  "description": "The 1990-2020 wildland-urban interface of the conterminous United States (RDS-2015-0012-4, 4th edition), produced by the SILVIS Lab and the USDA Forest Service, as downloaded by `_shared/scripts/download_raw.sh silvis-wui` from the Forest Service Research Data Archive. One zip holding the File Geodatabase `CONUS_WUI_block_1990_2020_change_v4.gdb`: 9,158,401 2020 census-block polygons in NAD83 Albers with WUI class, housing units, housing density and vegetation cover for 1990, 2000, 2010 and 2020. Read-only.",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "cowy shared data"
+    },
+    {
+      "rel": "license",
+      "href": "https://doi.org/10.2737/RDS-2015-0012-4",
+      "type": "text/html",
+      "title": "The 1990-2020 wildland-urban interface of the conterminous United States"
+    },
+    {
+      "rel": "parent",
+      "href": "../../raw.json",
+      "type": "application/json",
+      "title": "Raw"
+    }
+  ],
+  "stac_extensions": [
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "title": "SILVIS wildland-urban interface 1990-2020 (raw)",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -124.85,
+          24.4,
+          -66.88,
+          49.4
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "1990-01-01T00:00:00Z",
+          "2020-12-31T00:00:00Z"
+        ]
+      ]
+    }
+  },
+  "license": "other",
+  "keywords": [
+    "wildland-urban interface",
+    "WUI",
+    "housing density",
+    "census blocks",
+    "wildfire"
+  ],
+  "providers": [
+    {
+      "name": "SILVIS Lab, University of Wisconsin-Madison",
+      "roles": [
+        "producer"
+      ],
+      "url": "https://silvis.forest.wisc.edu/data/wui-change/"
+    },
+    {
+      "name": "USDA Forest Service",
+      "roles": [
+        "producer",
+        "licensor",
+        "host"
+      ],
+      "url": "https://doi.org/10.2737/RDS-2015-0012-4"
+    }
+  ],
+  "assets": {
+    "RDS-2015-0012-4": {
+      "href": "./RDS-2015-0012-4.zip",
+      "type": "application/zip",
+      "title": "RDS-2015-0012-4.zip",
+      "file:size": 4996354085,
+      "updated": "2026-11-19T22:16:27.757201Z",
+      "roles": [
+        "data"
+      ]
+    }
+  }
+}

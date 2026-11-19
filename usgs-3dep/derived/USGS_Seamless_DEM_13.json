@@ -1,0 +1,90 @@
+{
+  "type": "Collection",
+  "id": "usgs-3dep-13-vrt",
+  "stac_version": "1.1.0",
+  "description": "GDAL VRT that mosaics every tile in `usgs-3dep/raw` into one float32 raster in EPSG:4269 (elevation in metres, nodata -999999). It is the USGS seamless VRT with each tile's S3 URL replaced by the local file, written by `usgs-3dep/scripts/build_vrt.sh`.",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "cowy shared data"
+    },
+    {
+      "rel": "license",
+      "href": "https://www.usgs.gov/information-policies-and-instructions/copyrights-and-credits",
+      "type": "text/html",
+      "title": "USGS copyrights and credits"
+    },
+    {
+      "rel": "parent",
+      "href": "./catalog.json",
+      "type": "application/json",
+      "title": "USGS 3DEP 1/3 arc-second DEM (derived)"
+    }
+  ],
+  "stac_extensions": [
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json"
+  ],
+  "title": "USGS 3DEP 1/3 arc-second DEM, seamless VRT",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -180.0,
+          -15,
+          180.0,
+          72
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          "2026-11-19T00:00:00Z"
+        ]
+      ]
+    }
+  },
+  "license": "other",
+  "keywords": [
+    "elevation",
+    "DEM",
+    "3DEP",
+    "terrain",
+    "VRT"
+  ],
+  "providers": [
+    {
+      "name": "U.S. Geological Survey",
+      "roles": [
+        "producer",
+        "licensor",
+        "host"
+      ],
+      "url": "https://www.usgs.gov/3d-elevation-program"
+    },
+    {
+      "name": "cowy",
+      "roles": [
+        "processor",
+        "host"
+      ]
+    }
+  ],
+  "assets": {
+    "vrt": {
+      "href": "./USGS_Seamless_DEM_13.vrt",
+      "type": "application/xml",
+      "title": "USGS_Seamless_DEM_13.vrt",
+      "file:size": 708537,
+      "updated": "2026-11-19T22:57:10.929800Z",
+      "proj:code": "EPSG:4269",
+      "roles": [
+        "data"
+      ]
+    }
+  }
+}

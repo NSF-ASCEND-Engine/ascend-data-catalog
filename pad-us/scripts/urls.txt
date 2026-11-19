@@ -1,0 +1,3 @@
+https://www.sciencebase.gov/catalog/file/get/652d4fc5d34e44db0e2ee45e?name=PADUS4_1Geodatabase.zip PADUS4_1Geodatabase.zip
+https://www.sciencebase.gov/catalog/file/get/652d4fc5d34e44db0e2ee45e?name=PADUS41_MetadataXML_FGDC.xml PADUS41_MetadataXML_FGDC.xml
+https://www.sciencebase.gov/catalog/file/get/652d4fc5d34e44db0e2ee45e?name=VersHist_PADUS.txt VersHist_PADUS.txt

@@ -1,0 +1,171 @@
+{
+  "type": "Collection",
+  "id": "wildfire-risk-to-communities-raw",
+  "stac_version": "1.1.0",
+  "description": "USDA Forest Service Wildfire Risk to Communities landscape-wide risk components (RDS-2020-0016-2, published 2024) as downloaded by `_shared/scripts/download_raw.sh wildfire-risk-to-communities` from the Forest Service Research Data Archive. Eight 30 m GeoTIFF layers: BP (burn probability); CFL (conditional flame length); CRPS (conditional risk to potential structures); Exposure (exposure type); FLEP4 (flame length exceedance probability, 4 ft); FLEP8 (flame length exceedance probability, 8 ft); RPS (risk to potential structures); WHP (wildfire hazard potential). One zip per layer for CONUS, plus one zip each for Alaska and Hawaii holding all eight layers. The Archive's other per-state zips repeat the CONUS rasters and are not mirrored; their URLs are on the DOI landing page. Built from LANDFIRE 2020 (version 2.2.0) fuels and FSim burn probability; the FGDC metadata gives a ground-condition date of 2020-12-31. Read-only.",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "cowy shared data"
+    },
+    {
+      "rel": "license",
+      "href": "https://doi.org/10.2737/RDS-2020-0016-2",
+      "type": "text/html",
+      "title": "Wildfire Risk to Communities: Spatial datasets of landscape-wide wildfire risk components for the United States (2nd Edition)"
+    },
+    {
+      "rel": "parent",
+      "href": "../../raw.json",
+      "type": "application/json",
+      "title": "Raw"
+    }
+  ],
+  "stac_extensions": [
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "title": "Wildfire Risk to Communities, 2nd edition (raw)",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -179.15,
+          18.9,
+          179.78,
+          71.4
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2020-12-31T00:00:00Z",
+          "2020-12-31T00:00:00Z"
+        ]
+      ]
+    }
+  },
+  "license": "other",
+  "keywords": [
+    "wildfire",
+    "risk",
+    "burn probability",
+    "flame length",
+    "wildfire hazard potential"
+  ],
+  "providers": [
+    {
+      "name": "USDA Forest Service, Rocky Mountain Research Station",
+      "roles": [
+        "producer",
+        "licensor",
+        "host"
+      ],
+      "url": "https://doi.org/10.2737/RDS-2020-0016-2"
+    }
+  ],
+  "assets": {
+    "RDS-2020-0016-2_Alaska": {
+      "href": "./RDS-2020-0016-2_Alaska.zip",
+      "type": "application/zip",
+      "title": "All eight layers, Alaska",
+      "file:size": 29001253408,
+      "updated": "2026-11-19T22:23:36.671550Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "RDS-2020-0016-2_BP_CONUS": {
+      "href": "./RDS-2020-0016-2_BP_CONUS.zip",
+      "type": "application/zip",
+      "title": "Burn probability, CONUS",
+      "file:size": 34721960854,
+      "updated": "2026-11-19T22:23:38.468010Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "RDS-2020-0016-2_CFL_CONUS": {
+      "href": "./RDS-2020-0016-2_CFL_CONUS.zip",
+      "type": "application/zip",
+      "title": "Conditional flame length, CONUS",
+      "file:size": 31255888384,
+      "updated": "2026-11-19T22:23:37.874699Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "RDS-2020-0016-2_CRPS_CONUS": {
+      "href": "./RDS-2020-0016-2_CRPS_CONUS.zip",
+      "type": "application/zip",
+      "title": "Conditional risk to potential structures, CONUS",
+      "file:size": 28883079814,
+      "updated": "2026-11-19T22:23:04.108819Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "RDS-2020-0016-2_Exposure_CONUS": {
+      "href": "./RDS-2020-0016-2_Exposure_CONUS.zip",
+      "type": "application/zip",
+      "title": "Exposure type, CONUS",
+      "file:size": 6054476592,
+      "updated": "2026-11-19T22:16:09.187201Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "RDS-2020-0016-2_FLEP4_CONUS": {
+      "href": "./RDS-2020-0016-2_FLEP4_CONUS.zip",
+      "type": "application/zip",
+      "title": "Flame length exceedance probability, 4 ft, CONUS",
+      "file:size": 24456112983,
+      "updated": "2026-11-19T22:22:30.953805Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "RDS-2020-0016-2_FLEP8_CONUS": {
+      "href": "./RDS-2020-0016-2_FLEP8_CONUS.zip",
+      "type": "application/zip",
+      "title": "Flame length exceedance probability, 8 ft, CONUS",
+      "file:size": 18724071559,
+      "updated": "2026-11-19T22:21:30.482175Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "RDS-2020-0016-2_Hawaii": {
+      "href": "./RDS-2020-0016-2_Hawaii.zip",
+      "type": "application/zip",
+      "title": "All eight layers, Hawaii",
+      "file:size": 471502996,
+      "updated": "2026-11-19T22:19:41.361007Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "RDS-2020-0016-2_RPS_CONUS": {
+      "href": "./RDS-2020-0016-2_RPS_CONUS.zip",
+      "type": "application/zip",
+      "title": "Risk to potential structures, CONUS",
+      "file:size": 36280914984,
+      "updated": "2026-11-19T22:23:36.138778Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "RDS-2020-0016-2_WHP_CONUS": {
+      "href": "./RDS-2020-0016-2_WHP_CONUS.zip",
+      "type": "application/zip",
+      "title": "Wildfire hazard potential, CONUS",
+      "file:size": 8774416139,
+      "updated": "2026-11-19T22:16:42.356070Z",
+      "roles": [
+        "data"
+      ]
+    }
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "type": "Collection",
+  "id": "cdc-svi-raw",
+  "stac_version": "1.1.0",
+  "description": "CDC/ATSDR Social Vulnerability Index 2022 for the 50 states and DC as downloaded by `_shared/scripts/download_raw.sh cdc-svi` from the URLs in `scripts/urls.txt`: census-tract and county tables, each as a CSV and as a File Geodatabase zip with geometry. Built by CDC from the 2018-2022 American Community Survey. Read-only.",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "cowy shared data"
+    },
+    {
+      "rel": "license",
+      "href": "https://www.atsdr.cdc.gov/place-health/php/svi/",
+      "type": "text/html",
+      "title": "CDC/ATSDR Social Vulnerability Index"
+    },
+    {
+      "rel": "parent",
+      "href": "../../raw.json",
+      "type": "application/json",
+      "title": "Raw"
+    }
+  ],
+  "stac_extensions": [
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "title": "CDC/ATSDR Social Vulnerability Index 2022 (raw)",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -179.15,
+          18.9,
+          179.78,
+          71.4
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2018-01-01T00:00:00Z",
+          "2022-12-31T00:00:00Z"
+        ]
+      ]
+    }
+  },
+  "license": "other",
+  "keywords": [
+    "social vulnerability",
+    "SVI",
+    "census tracts",
+    "counties",
+    "demographics"
+  ],
+  "providers": [
+    {
+      "name": "CDC/ATSDR",
+      "roles": [
+        "producer",
+        "licensor",
+        "host"
+      ],
+      "url": "https://www.atsdr.cdc.gov/place-health/php/svi/"
+    }
+  ],
+  "assets": {
+    "SVI_2022_US.csv": {
+      "href": "./SVI_2022_US.csv",
+      "type": "text/csv",
+      "title": "SVI_2022_US.csv",
+      "file:size": 61102059,
+      "updated": "2026-11-19T22:15:22.591992Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "SVI_2022_US.zip": {
+      "href": "./SVI_2022_US.zip",
+      "type": "application/zip",
+      "title": "SVI_2022_US.zip",
+      "file:size": 63880878,
+      "updated": "2026-11-19T22:15:24.350225Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "SVI_2022_US_county.csv": {
+      "href": "./SVI_2022_US_county.csv",
+      "type": "text/csv",
+      "title": "SVI_2022_US_county.csv",
+      "file:size": 2301480,
+      "updated": "2026-11-19T22:15:22.067953Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "SVI_2022_US_county.zip": {
+      "href": "./SVI_2022_US_county.zip",
+      "type": "application/zip",
+      "title": "SVI_2022_US_county.zip",
+      "file:size": 7621432,
+      "updated": "2026-11-19T22:15:22.191873Z",
+      "roles": [
+        "data"
+      ]
+    }
+  }
+}

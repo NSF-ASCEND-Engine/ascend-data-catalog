@@ -1,0 +1,232 @@
+{
+  "type": "Collection",
+  "id": "camels-raw",
+  "stac_version": "1.1.0",
+  "description": "CAMELS (Catchment Attributes and MEteorology for Large-sample Studies) as downloaded by `_shared/scripts/download_raw.sh camels` from Zenodo record 15529996: time series v1.2 and catchment attributes v2.0 for 671 minimally disturbed CONUS basins of the USGS HCDN-2009 network. `basin_timeseries_v1p2_metForcing_obsFlow.zip` holds daily basin-mean forcings from Daymet and NLDAS (1980-2014) and Maurer (1980-2008), observed USGS streamflow, basin metadata and simplified basin shapefiles; the three `modelOutput` zips hold SNOW-17 / SAC-SMA simulations per forcing; `basin_set_full_res.zip` holds full-resolution basin boundaries; the `camels_*.txt` files are semicolon-delimited attribute tables keyed by `gauge_id`. Read-only.",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "cowy shared data"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/4.0/",
+      "type": "text/html",
+      "title": "Creative Commons Attribution 4.0 International"
+    },
+    {
+      "rel": "cite-as",
+      "href": "https://doi.org/10.5281/zenodo.15529996"
+    },
+    {
+      "rel": "parent",
+      "href": "../../raw.json",
+      "type": "application/json",
+      "title": "Raw"
+    }
+  ],
+  "stac_extensions": [
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "title": "CAMELS (raw)",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -124.85,
+          24.4,
+          -66.88,
+          49.4
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "1980-01-01T00:00:00Z",
+          "2014-12-31T00:00:00Z"
+        ]
+      ]
+    }
+  },
+  "license": "CC-BY-4.0",
+  "keywords": [
+    "hydrology",
+    "streamflow",
+    "catchments",
+    "CAMELS",
+    "forcing",
+    "large-sample"
+  ],
+  "providers": [
+    {
+      "name": "NSF National Center for Atmospheric Research",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://ral.ucar.edu/solutions/products/camels"
+    },
+    {
+      "name": "Zenodo",
+      "roles": [
+        "host"
+      ],
+      "url": "https://doi.org/10.5281/zenodo.15529996"
+    }
+  ],
+  "assets": {
+    "basin_set_full_res": {
+      "href": "./basin_set_full_res.zip",
+      "type": "application/zip",
+      "title": "basin_set_full_res.zip",
+      "file:size": 45179559,
+      "updated": "2026-11-19T22:15:49.327482Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "basin_timeseries_v1p2_metForcing_obsFlow": {
+      "href": "./basin_timeseries_v1p2_metForcing_obsFlow.zip",
+      "type": "application/zip",
+      "title": "basin_timeseries_v1p2_metForcing_obsFlow.zip",
+      "file:size": 3406626583,
+      "updated": "2026-11-19T22:31:53.867127Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "basin_timeseries_v1p2_modelOutput_daymet": {
+      "href": "./basin_timeseries_v1p2_modelOutput_daymet.zip",
+      "type": "application/zip",
+      "title": "basin_timeseries_v1p2_modelOutput_daymet.zip",
+      "file:size": 4207763546,
+      "updated": "2026-11-19T22:30:53.392656Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "basin_timeseries_v1p2_modelOutput_maurer": {
+      "href": "./basin_timeseries_v1p2_modelOutput_maurer.zip",
+      "type": "application/zip",
+      "title": "basin_timeseries_v1p2_modelOutput_maurer.zip",
+      "file:size": 3138552670,
+      "updated": "2026-11-19T22:30:13.412507Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "basin_timeseries_v1p2_modelOutput_nldas": {
+      "href": "./basin_timeseries_v1p2_modelOutput_nldas.zip",
+      "type": "application/zip",
+      "title": "basin_timeseries_v1p2_modelOutput_nldas.zip",
+      "file:size": 3766449871,
+      "updated": "2026-11-19T22:28:43.876313Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "camels_attributes_v2.0.pdf": {
+      "href": "./camels_attributes_v2.0.pdf",
+      "type": "application/pdf",
+      "title": "camels_attributes_v2.0.pdf",
+      "file:size": 91532,
+      "updated": "2026-11-19T22:15:27.028537Z",
+      "roles": [
+        "metadata"
+      ]
+    },
+    "camels_attributes_v2.0.xlsx": {
+      "href": "./camels_attributes_v2.0.xlsx",
+      "type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "title": "camels_attributes_v2.0.xlsx",
+      "file:size": 16278,
+      "updated": "2026-11-19T22:15:27.617271Z",
+      "roles": [
+        "metadata"
+      ]
+    },
+    "camels_clim": {
+      "href": "./camels_clim.txt",
+      "type": "text/plain",
+      "title": "camels_clim.txt",
+      "file:size": 100673,
+      "updated": "2026-11-19T22:15:27.115711Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "camels_geol": {
+      "href": "./camels_geol.txt",
+      "type": "text/plain",
+      "title": "camels_geol.txt",
+      "file:size": 71583,
+      "updated": "2026-11-19T22:15:27.022088Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "camels_hydro": {
+      "href": "./camels_hydro.txt",
+      "type": "text/plain",
+      "title": "camels_hydro.txt",
+      "file:size": 122799,
+      "updated": "2026-11-19T22:15:27.896687Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "camels_name": {
+      "href": "./camels_name.txt",
+      "type": "text/plain",
+      "title": "camels_name.txt",
+      "file:size": 30417,
+      "updated": "2026-11-19T22:15:26.901823Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "camels_soil": {
+      "href": "./camels_soil.txt",
+      "type": "text/plain",
+      "title": "camels_soil.txt",
+      "file:size": 109125,
+      "updated": "2026-11-19T22:15:27.688305Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "camels_topo": {
+      "href": "./camels_topo.txt",
+      "type": "text/plain",
+      "title": "camels_topo.txt",
+      "file:size": 38677,
+      "updated": "2026-11-19T22:15:27.376859Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "camels_vege": {
+      "href": "./camels_vege.txt",
+      "type": "text/plain",
+      "title": "camels_vege.txt",
+      "file:size": 107970,
+      "updated": "2026-11-19T22:15:27.081594Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "readme": {
+      "href": "./readme.txt",
+      "type": "text/plain",
+      "title": "readme.txt",
+      "file:size": 1704,
+      "updated": "2026-11-19T22:15:26.790285Z",
+      "roles": [
+        "data"
+      ]
+    }
+  }
+}

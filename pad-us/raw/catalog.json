@@ -1,0 +1,101 @@
+{
+  "type": "Collection",
+  "id": "pad-us-raw",
+  "stac_version": "1.1.0",
+  "description": "USGS Gap Analysis Project Protected Areas Database of the United States (PAD-US) 4.1 full inventory as downloaded by `_shared/scripts/download_raw.sh pad-us` from ScienceBase: the national File Geodatabase zip, its FGDC metadata and the version history. The geodatabase has six polygon feature classes (Fee, Easement, Designation, Proclamation, Marine, and all five combined) in USA Contiguous Albers Equal Area Conic USGS (ESRI:102039), with owner, manager, designation type, GAP status and public access attributes, plus lookup tables for the coded attributes. Covers the 50 states, DC, territories and marine areas. Source dates vary by record (`Src_Date`); the interval's end is the geodatabase's packaging date. Read-only.",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "cowy shared data"
+    },
+    {
+      "rel": "license",
+      "href": "https://doi.org/10.5066/P96WBCHS",
+      "type": "text/html",
+      "title": "PAD-US 4.1 data release"
+    },
+    {
+      "rel": "parent",
+      "href": "../../raw.json",
+      "type": "application/json",
+      "title": "Raw"
+    }
+  ],
+  "stac_extensions": [
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "title": "PAD-US 4.1 (raw)",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -180.0,
+          -15.0,
+          180.0,
+          72.0
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          "2025-03-30T00:00:00Z"
+        ]
+      ]
+    }
+  },
+  "license": "other",
+  "keywords": [
+    "protected areas",
+    "land ownership",
+    "land management",
+    "PAD-US",
+    "GAP status"
+  ],
+  "providers": [
+    {
+      "name": "U.S. Geological Survey Gap Analysis Project",
+      "roles": [
+        "producer",
+        "licensor",
+        "host"
+      ],
+      "url": "https://doi.org/10.5066/P96WBCHS"
+    }
+  ],
+  "assets": {
+    "PADUS41_MetadataXML_FGDC": {
+      "href": "./PADUS41_MetadataXML_FGDC.xml",
+      "type": "application/xml",
+      "title": "PADUS41_MetadataXML_FGDC.xml",
+      "file:size": 90634,
+      "updated": "2026-11-19T22:15:26.658841Z",
+      "roles": [
+        "metadata"
+      ]
+    },
+    "PADUS4_1Geodatabase": {
+      "href": "./PADUS4_1Geodatabase.zip",
+      "type": "application/zip",
+      "title": "PADUS4_1Geodatabase.zip",
+      "file:size": 1523434496,
+      "updated": "2026-11-19T22:16:45.832104Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "VersHist_PADUS": {
+      "href": "./VersHist_PADUS.txt",
+      "type": "text/plain",
+      "title": "VersHist_PADUS.txt",
+      "file:size": 32929,
+      "updated": "2026-11-19T22:15:26.668710Z",
+      "roles": [
+        "data"
+      ]
+    }
+  }
+}

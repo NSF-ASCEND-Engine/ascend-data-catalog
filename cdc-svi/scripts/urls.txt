@@ -1,0 +1,4 @@
+https://svi.cdc.gov/Documents/Data/2022/db/states/SVI_2022_US.zip
+https://svi.cdc.gov/Documents/Data/2022/db/states_counties/SVI_2022_US_county.zip
+https://svi.cdc.gov/Documents/Data/2022/csv/states/SVI_2022_US.csv
+https://svi.cdc.gov/Documents/Data/2022/csv/states_counties/SVI_2022_US_county.csv

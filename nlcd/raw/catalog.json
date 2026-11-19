@@ -1,0 +1,877 @@
+{
+  "type": "Collection",
+  "id": "nlcd-raw",
+  "stac_version": "1.1.0",
+  "description": "USGS Annual National Land Cover Database Collection 1.1 data bundles as downloaded by `_shared/scripts/download_raw.sh nlcd` from mrlc.gov: land cover (LndCov) and fractional impervious surface (FctImp), one zip per product and year, 1985-2024. Each zip holds one CONUS GeoTIFF (uint8, 30 m, 160000 x 105000, Albers Equal Area on WGS 84, nodata 250) and its FGDC metadata. The other four Annual NLCD products (land cover change, land cover confidence, impervious descriptor, spectral change day of year) follow the same URL pattern and are not mirrored. Read-only.",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "cowy shared data"
+    },
+    {
+      "rel": "license",
+      "href": "https://www.mrlc.gov/data",
+      "type": "text/html",
+      "title": "MRLC data"
+    },
+    {
+      "rel": "parent",
+      "href": "../../raw.json",
+      "type": "application/json",
+      "title": "Raw"
+    }
+  ],
+  "stac_extensions": [
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "title": "Annual NLCD Collection 1.1 (raw)",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -129.28,
+          21.81,
+          -63.12,
+          52.92
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "1985-01-01T00:00:00Z",
+          "2024-12-31T00:00:00Z"
+        ]
+      ]
+    }
+  },
+  "license": "other",
+  "keywords": [
+    "land cover",
+    "NLCD",
+    "impervious surface",
+    "land use",
+    "Landsat"
+  ],
+  "providers": [
+    {
+      "name": "U.S. Geological Survey",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.usgs.gov/centers/eros/science/annual-national-land-cover-database"
+    },
+    {
+      "name": "Multi-Resolution Land Characteristics Consortium",
+      "roles": [
+        "host"
+      ],
+      "url": "https://www.mrlc.gov"
+    }
+  ],
+  "assets": {
+    "Annual_NLCD_FctImp_1985_CU_C1V1": {
+      "href": "./Annual_NLCD_FctImp_1985_CU_C1V1.zip",
+      "type": "application/zip",
+      "title": "Fractional impervious surface 1985",
+      "file:size": 768439409,
+      "updated": "2026-11-19T22:44:26.362970Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "Annual_NLCD_FctImp_1986_CU_C1V1": {
+      "href": "./Annual_NLCD_FctImp_1986_CU_C1V1.zip",
+      "type": "application/zip",
+      "title": "Fractional impervious surface 1986",
+      "file:size": 771801961,
+      "updated": "2026-11-19T22:44:53.584913Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "Annual_NLCD_FctImp_1987_CU_C1V1": {
+      "href": "./Annual_NLCD_FctImp_1987_CU_C1V1.zip",
+      "type": "application/zip",
+      "title": "Fractional impervious surface 1987",
+      "file:size": 776448123,
+      "updated": "2026-11-19T22:44:42.788527Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "Annual_NLCD_FctImp_1988_CU_C1V1": {
+      "href": "./Annual_NLCD_FctImp_1988_CU_C1V1.zip",
+      "type": "application/zip",
+      "title": "Fractional impervious surface 1988",
+      "file:size": 781562930,
+      "updated": "2026-11-19T22:47:00.938875Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "Annual_NLCD_FctImp_1989_CU_C1V1": {
+      "href": "./Annual_NLCD_FctImp_1989_CU_C1V1.zip",
+      "type": "application/zip",
+      "title": "Fractional impervious surface 1989",
+      "file:size": 787342441,
+      "updated": "2026-11-19T22:48:54.680773Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "Annual_NLCD_FctImp_1990_CU_C1V1": {
+      "href": "./Annual_NLCD_FctImp_1990_CU_C1V1.zip",
+      "type": "application/zip",
+      "title": "Fractional impervious surface 1990",
+      "file:size": 791973294,
+      "updated": "2026-11-19T22:46:27.207609Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "Annual_NLCD_FctImp_1991_CU_C1V1": {
+      "href": "./Annual_NLCD_FctImp_1991_CU_C1V1.zip",
+      "type": "application/zip",
+      "title": "Fractional impervious surface 1991",
+      "file:size": 797188704,
+      "updated": "2026-11-19T22:46:08.690936Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "Annual_NLCD_FctImp_1992_CU_C1V1": {
+      "href": "./Annual_NLCD_FctImp_1992_CU_C1V1.zip",
+      "type": "application/zip",
+      "title": "Fractional impervious surface 1992",
+      "file:size": 802189824,
+      "updated": "2026-11-19T22:47:50.785270Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "Annual_NLCD_FctImp_1993_CU_C1V1": {
+      "href": "./Annual_NLCD_FctImp_1993_CU_C1V1.zip",
+      "type": "application/zip",
+      "title": "Fractional impervious surface 1993",
+      "file:size": 805932772,
+      "updated": "2026-11-19T22:48:15.149289Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "Annual_NLCD_FctImp_1994_CU_C1V1": {
+      "href": "./Annual_NLCD_FctImp_1994_CU_C1V1.zip",
+      "type": "application/zip",
+      "title": "Fractional impervious surface 1994",
+      "file:size": 810909842,
+      "updated": "2026-11-19T22:47:22.712023Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "Annual_NLCD_FctImp_1995_CU_C1V1": {
+      "href": "./Annual_NLCD_FctImp_1995_CU_C1V1.zip",
+      "type": "application/zip",
+      "title": "Fractional impervious surface 1995",
+      "file:size": 816219730,
+      "updated": "2026-11-19T22:49:34.531162Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "Annual_NLCD_FctImp_1996_CU_C1V1": {
+      "href": "./Annual_NLCD_FctImp_1996_CU_C1V1.zip",
+      "type": "application/zip",
+      "title": "Fractional impervious surface 1996",
+      "file:size": 823299808,
+      "updated": "2026-11-19T22:47:46.893836Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "Annual_NLCD_FctImp_1997_CU_C1V1": {
+      "href": "./Annual_NLCD_FctImp_1997_CU_C1V1.zip",
+      "type": "application/zip",
+      "title": "Fractional impervious surface 1997",
+      "file:size": 828584918,
+      "updated": "2026-11-19T22:48:43.918373Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "Annual_NLCD_FctImp_1998_CU_C1V1": {
+      "href": "./Annual_NLCD_FctImp_1998_CU_C1V1.zip",
+      "type": "application/zip",
+      "title": "Fractional impervious surface 1998",
+      "file:size": 834009367,
+      "updated": "2026-11-19T22:51:10.931254Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "Annual_NLCD_FctImp_1999_CU_C1V1": {
+      "href": "./Annual_NLCD_FctImp_1999_CU_C1V1.zip",
+      "type": "application/zip",
+      "title": "Fractional impervious surface 1999",
+      "file:size": 839994272,
+      "updated": "2026-11-19T22:48:58.457513Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "Annual_NLCD_FctImp_2000_CU_C1V1": {
+      "href": "./Annual_NLCD_FctImp_2000_CU_C1V1.zip",
+      "type": "application/zip",
+      "title": "Fractional impervious surface 2000",
+      "file:size": 845777002,
+      "updated": "2026-11-19T22:49:23.031409Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "Annual_NLCD_FctImp_2001_CU_C1V1": {
+      "href": "./Annual_NLCD_FctImp_2001_CU_C1V1.zip",
+      "type": "application/zip",
+      "title": "Fractional impervious surface 2001",
+      "file:size": 851114232,
+      "updated": "2026-11-19T22:50:27.013807Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "Annual_NLCD_FctImp_2002_CU_C1V1": {
+      "href": "./Annual_NLCD_FctImp_2002_CU_C1V1.zip",
+      "type": "application/zip",
+      "title": "Fractional impervious surface 2002",
+      "file:size": 858877512,
+      "updated": "2026-11-19T22:49:31.574081Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "Annual_NLCD_FctImp_2003_CU_C1V1": {
+      "href": "./Annual_NLCD_FctImp_2003_CU_C1V1.zip",
+      "type": "application/zip",
+      "title": "Fractional impervious surface 2003",
+      "file:size": 864417455,
+      "updated": "2026-11-19T22:51:57.916404Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "Annual_NLCD_FctImp_2004_CU_C1V1": {
+      "href": "./Annual_NLCD_FctImp_2004_CU_C1V1.zip",
+      "type": "application/zip",
+      "title": "Fractional impervious surface 2004",
+      "file:size": 870166284,
+      "updated": "2026-11-19T22:50:28.070794Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "Annual_NLCD_FctImp_2005_CU_C1V1": {
+      "href": "./Annual_NLCD_FctImp_2005_CU_C1V1.zip",
+      "type": "application/zip",
+      "title": "Fractional impervious surface 2005",
+      "file:size": 878163972,
+      "updated": "2026-11-19T22:50:53.822202Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "Annual_NLCD_FctImp_2006_CU_C1V1": {
+      "href": "./Annual_NLCD_FctImp_2006_CU_C1V1.zip",
+      "type": "application/zip",
+      "title": "Fractional impervious surface 2006",
+      "file:size": 886006179,
+      "updated": "2026-11-19T22:52:02.772199Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "Annual_NLCD_FctImp_2007_CU_C1V1": {
+      "href": "./Annual_NLCD_FctImp_2007_CU_C1V1.zip",
+      "type": "application/zip",
+      "title": "Fractional impervious surface 2007",
+      "file:size": 892952360,
+      "updated": "2026-11-19T22:53:16.846670Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "Annual_NLCD_FctImp_2008_CU_C1V1": {
+      "href": "./Annual_NLCD_FctImp_2008_CU_C1V1.zip",
+      "type": "application/zip",
+      "title": "Fractional impervious surface 2008",
+      "file:size": 898603552,
+      "updated": "2026-11-19T22:51:44.350167Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "Annual_NLCD_FctImp_2009_CU_C1V1": {
+      "href": "./Annual_NLCD_FctImp_2009_CU_C1V1.zip",
+      "type": "application/zip",
+      "title": "Fractional impervious surface 2009",
+      "file:size": 903123325,
+      "updated": "2026-11-19T22:52:44.091370Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "Annual_NLCD_FctImp_2010_CU_C1V1": {
+      "href": "./Annual_NLCD_FctImp_2010_CU_C1V1.zip",
+      "type": "application/zip",
+      "title": "Fractional impervious surface 2010",
+      "file:size": 907365087,
+      "updated": "2026-11-19T22:52:42.043551Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "Annual_NLCD_FctImp_2011_CU_C1V1": {
+      "href": "./Annual_NLCD_FctImp_2011_CU_C1V1.zip",
+      "type": "application/zip",
+      "title": "Fractional impervious surface 2011",
+      "file:size": 911338128,
+      "updated": "2026-11-19T22:53:57.735811Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "Annual_NLCD_FctImp_2012_CU_C1V1": {
+      "href": "./Annual_NLCD_FctImp_2012_CU_C1V1.zip",
+      "type": "application/zip",
+      "title": "Fractional impervious surface 2012",
+      "file:size": 915493933,
+      "updated": "2026-11-19T22:55:54.201810Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "Annual_NLCD_FctImp_2013_CU_C1V1": {
+      "href": "./Annual_NLCD_FctImp_2013_CU_C1V1.zip",
+      "type": "application/zip",
+      "title": "Fractional impervious surface 2013",
+      "file:size": 919621211,
+      "updated": "2026-11-19T22:53:07.569294Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "Annual_NLCD_FctImp_2014_CU_C1V1": {
+      "href": "./Annual_NLCD_FctImp_2014_CU_C1V1.zip",
+      "type": "application/zip",
+      "title": "Fractional impervious surface 2014",
+      "file:size": 923981347,
+      "updated": "2026-11-19T22:53:25.505276Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "Annual_NLCD_FctImp_2015_CU_C1V1": {
+      "href": "./Annual_NLCD_FctImp_2015_CU_C1V1.zip",
+      "type": "application/zip",
+      "title": "Fractional impervious surface 2015",
+      "file:size": 928230997,
+      "updated": "2026-11-19T22:54:02.121010Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "Annual_NLCD_FctImp_2016_CU_C1V1": {
+      "href": "./Annual_NLCD_FctImp_2016_CU_C1V1.zip",
+      "type": "application/zip",
+      "title": "Fractional impervious surface 2016",
+      "file:size": 932501932,
+      "updated": "2026-11-19T22:55:09.072211Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "Annual_NLCD_FctImp_2017_CU_C1V1": {
+      "href": "./Annual_NLCD_FctImp_2017_CU_C1V1.zip",
+      "type": "application/zip",
+      "title": "Fractional impervious surface 2017",
+      "file:size": 937105277,
+      "updated": "2026-11-19T23:00:18.281484Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "Annual_NLCD_FctImp_2018_CU_C1V1": {
+      "href": "./Annual_NLCD_FctImp_2018_CU_C1V1.zip",
+      "type": "application/zip",
+      "title": "Fractional impervious surface 2018",
+      "file:size": 941613109,
+      "updated": "2026-11-19T22:56:03.932203Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "Annual_NLCD_FctImp_2019_CU_C1V1": {
+      "href": "./Annual_NLCD_FctImp_2019_CU_C1V1.zip",
+      "type": "application/zip",
+      "title": "Fractional impervious surface 2019",
+      "file:size": 946108061,
+      "updated": "2026-11-19T22:57:16.539223Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "Annual_NLCD_FctImp_2020_CU_C1V1": {
+      "href": "./Annual_NLCD_FctImp_2020_CU_C1V1.zip",
+      "type": "application/zip",
+      "title": "Fractional impervious surface 2020",
+      "file:size": 950689697,
+      "updated": "2026-11-19T22:55:26.470659Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "Annual_NLCD_FctImp_2021_CU_C1V1": {
+      "href": "./Annual_NLCD_FctImp_2021_CU_C1V1.zip",
+      "type": "application/zip",
+      "title": "Fractional impervious surface 2021",
+      "file:size": 956308388,
+      "updated": "2026-11-19T22:56:12.668933Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "Annual_NLCD_FctImp_2022_CU_C1V1": {
+      "href": "./Annual_NLCD_FctImp_2022_CU_C1V1.zip",
+      "type": "application/zip",
+      "title": "Fractional impervious surface 2022",
+      "file:size": 962491327,
+      "updated": "2026-11-19T22:57:07.408378Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "Annual_NLCD_FctImp_2023_CU_C1V1": {
+      "href": "./Annual_NLCD_FctImp_2023_CU_C1V1.zip",
+      "type": "application/zip",
+      "title": "Fractional impervious surface 2023",
+      "file:size": 969029581,
+      "updated": "2026-11-19T22:57:14.890599Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "Annual_NLCD_FctImp_2024_CU_C1V1": {
+      "href": "./Annual_NLCD_FctImp_2024_CU_C1V1.zip",
+      "type": "application/zip",
+      "title": "Fractional impervious surface 2024",
+      "file:size": 976387286,
+      "updated": "2026-11-19T22:58:38.864808Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "Annual_NLCD_LndCov_1985_CU_C1V1": {
+      "href": "./Annual_NLCD_LndCov_1985_CU_C1V1.zip",
+      "type": "application/zip",
+      "title": "Land cover 1985",
+      "file:size": 1348563113,
+      "updated": "2026-11-19T22:19:40.448998Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "Annual_NLCD_LndCov_1986_CU_C1V1": {
+      "href": "./Annual_NLCD_LndCov_1986_CU_C1V1.zip",
+      "type": "application/zip",
+      "title": "Land cover 1986",
+      "file:size": 1349350709,
+      "updated": "2026-11-19T22:23:09.419543Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "Annual_NLCD_LndCov_1987_CU_C1V1": {
+      "href": "./Annual_NLCD_LndCov_1987_CU_C1V1.zip",
+      "type": "application/zip",
+      "title": "Land cover 1987",
+      "file:size": 1349936124,
+      "updated": "2026-11-19T22:23:45.078631Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "Annual_NLCD_LndCov_1988_CU_C1V1": {
+      "href": "./Annual_NLCD_LndCov_1988_CU_C1V1.zip",
+      "type": "application/zip",
+      "title": "Land cover 1988",
+      "file:size": 1351003634,
+      "updated": "2026-11-19T22:24:11.653507Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "Annual_NLCD_LndCov_1989_CU_C1V1": {
+      "href": "./Annual_NLCD_LndCov_1989_CU_C1V1.zip",
+      "type": "application/zip",
+      "title": "Land cover 1989",
+      "file:size": 1351213674,
+      "updated": "2026-11-19T22:23:25.507080Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "Annual_NLCD_LndCov_1990_CU_C1V1": {
+      "href": "./Annual_NLCD_LndCov_1990_CU_C1V1.zip",
+      "type": "application/zip",
+      "title": "Land cover 1990",
+      "file:size": 1349314004,
+      "updated": "2026-11-19T22:23:47.557806Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "Annual_NLCD_LndCov_1991_CU_C1V1": {
+      "href": "./Annual_NLCD_LndCov_1991_CU_C1V1.zip",
+      "type": "application/zip",
+      "title": "Land cover 1991",
+      "file:size": 1348495193,
+      "updated": "2026-11-19T22:20:51.826886Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "Annual_NLCD_LndCov_1992_CU_C1V1": {
+      "href": "./Annual_NLCD_LndCov_1992_CU_C1V1.zip",
+      "type": "application/zip",
+      "title": "Land cover 1992",
+      "file:size": 1347634160,
+      "updated": "2026-11-19T22:22:21.919828Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "Annual_NLCD_LndCov_1993_CU_C1V1": {
+      "href": "./Annual_NLCD_LndCov_1993_CU_C1V1.zip",
+      "type": "application/zip",
+      "title": "Land cover 1993",
+      "file:size": 1346432478,
+      "updated": "2026-11-19T22:22:12.648873Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "Annual_NLCD_LndCov_1994_CU_C1V1": {
+      "href": "./Annual_NLCD_LndCov_1994_CU_C1V1.zip",
+      "type": "application/zip",
+      "title": "Land cover 1994",
+      "file:size": 1347149248,
+      "updated": "2026-11-19T22:26:31.441598Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "Annual_NLCD_LndCov_1995_CU_C1V1": {
+      "href": "./Annual_NLCD_LndCov_1995_CU_C1V1.zip",
+      "type": "application/zip",
+      "title": "Land cover 1995",
+      "file:size": 1346692065,
+      "updated": "2026-11-19T22:27:17.783051Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "Annual_NLCD_LndCov_1996_CU_C1V1": {
+      "href": "./Annual_NLCD_LndCov_1996_CU_C1V1.zip",
+      "type": "application/zip",
+      "title": "Land cover 1996",
+      "file:size": 1348084841,
+      "updated": "2026-11-19T22:26:20.074560Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "Annual_NLCD_LndCov_1997_CU_C1V1": {
+      "href": "./Annual_NLCD_LndCov_1997_CU_C1V1.zip",
+      "type": "application/zip",
+      "title": "Land cover 1997",
+      "file:size": 1347489784,
+      "updated": "2026-11-19T22:27:26.385483Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "Annual_NLCD_LndCov_1998_CU_C1V1": {
+      "href": "./Annual_NLCD_LndCov_1998_CU_C1V1.zip",
+      "type": "application/zip",
+      "title": "Land cover 1998",
+      "file:size": 1347688576,
+      "updated": "2026-11-19T22:30:00.494541Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "Annual_NLCD_LndCov_1999_CU_C1V1": {
+      "href": "./Annual_NLCD_LndCov_1999_CU_C1V1.zip",
+      "type": "application/zip",
+      "title": "Land cover 1999",
+      "file:size": 1350017261,
+      "updated": "2026-11-19T22:30:13.664999Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "Annual_NLCD_LndCov_2000_CU_C1V1": {
+      "href": "./Annual_NLCD_LndCov_2000_CU_C1V1.zip",
+      "type": "application/zip",
+      "title": "Land cover 2000",
+      "file:size": 1350514345,
+      "updated": "2026-11-19T22:28:08.584136Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "Annual_NLCD_LndCov_2001_CU_C1V1": {
+      "href": "./Annual_NLCD_LndCov_2001_CU_C1V1.zip",
+      "type": "application/zip",
+      "title": "Land cover 2001",
+      "file:size": 1351509256,
+      "updated": "2026-11-19T22:29:06.126986Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "Annual_NLCD_LndCov_2002_CU_C1V1": {
+      "href": "./Annual_NLCD_LndCov_2002_CU_C1V1.zip",
+      "type": "application/zip",
+      "title": "Land cover 2002",
+      "file:size": 1355584307,
+      "updated": "2026-11-19T22:32:41.568490Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "Annual_NLCD_LndCov_2003_CU_C1V1": {
+      "href": "./Annual_NLCD_LndCov_2003_CU_C1V1.zip",
+      "type": "application/zip",
+      "title": "Land cover 2003",
+      "file:size": 1357768070,
+      "updated": "2026-11-19T22:32:58.446099Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "Annual_NLCD_LndCov_2004_CU_C1V1": {
+      "href": "./Annual_NLCD_LndCov_2004_CU_C1V1.zip",
+      "type": "application/zip",
+      "title": "Land cover 2004",
+      "file:size": 1361675900,
+      "updated": "2026-11-19T22:32:28.767482Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "Annual_NLCD_LndCov_2005_CU_C1V1": {
+      "href": "./Annual_NLCD_LndCov_2005_CU_C1V1.zip",
+      "type": "application/zip",
+      "title": "Land cover 2005",
+      "file:size": 1365547661,
+      "updated": "2026-11-19T22:32:03.697917Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "Annual_NLCD_LndCov_2006_CU_C1V1": {
+      "href": "./Annual_NLCD_LndCov_2006_CU_C1V1.zip",
+      "type": "application/zip",
+      "title": "Land cover 2006",
+      "file:size": 1369095217,
+      "updated": "2026-11-19T22:36:42.265120Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "Annual_NLCD_LndCov_2007_CU_C1V1": {
+      "href": "./Annual_NLCD_LndCov_2007_CU_C1V1.zip",
+      "type": "application/zip",
+      "title": "Land cover 2007",
+      "file:size": 1373658957,
+      "updated": "2026-11-19T22:34:13.784780Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "Annual_NLCD_LndCov_2008_CU_C1V1": {
+      "href": "./Annual_NLCD_LndCov_2008_CU_C1V1.zip",
+      "type": "application/zip",
+      "title": "Land cover 2008",
+      "file:size": 1374750728,
+      "updated": "2026-11-19T22:36:52.805428Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "Annual_NLCD_LndCov_2009_CU_C1V1": {
+      "href": "./Annual_NLCD_LndCov_2009_CU_C1V1.zip",
+      "type": "application/zip",
+      "title": "Land cover 2009",
+      "file:size": 1376185143,
+      "updated": "2026-11-19T22:38:46.782538Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "Annual_NLCD_LndCov_2010_CU_C1V1": {
+      "href": "./Annual_NLCD_LndCov_2010_CU_C1V1.zip",
+      "type": "application/zip",
+      "title": "Land cover 2010",
+      "file:size": 1378482426,
+      "updated": "2026-11-19T22:34:55.324607Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "Annual_NLCD_LndCov_2011_CU_C1V1": {
+      "href": "./Annual_NLCD_LndCov_2011_CU_C1V1.zip",
+      "type": "application/zip",
+      "title": "Land cover 2011",
+      "file:size": 1384295627,
+      "updated": "2026-11-19T22:36:12.712151Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "Annual_NLCD_LndCov_2012_CU_C1V1": {
+      "href": "./Annual_NLCD_LndCov_2012_CU_C1V1.zip",
+      "type": "application/zip",
+      "title": "Land cover 2012",
+      "file:size": 1388934533,
+      "updated": "2026-11-19T22:36:59.713992Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "Annual_NLCD_LndCov_2013_CU_C1V1": {
+      "href": "./Annual_NLCD_LndCov_2013_CU_C1V1.zip",
+      "type": "application/zip",
+      "title": "Land cover 2013",
+      "file:size": 1389683886,
+      "updated": "2026-11-19T22:36:22.165389Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "Annual_NLCD_LndCov_2014_CU_C1V1": {
+      "href": "./Annual_NLCD_LndCov_2014_CU_C1V1.zip",
+      "type": "application/zip",
+      "title": "Land cover 2014",
+      "file:size": 1390369246,
+      "updated": "2026-11-19T22:37:35.452912Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "Annual_NLCD_LndCov_2015_CU_C1V1": {
+      "href": "./Annual_NLCD_LndCov_2015_CU_C1V1.zip",
+      "type": "application/zip",
+      "title": "Land cover 2015",
+      "file:size": 1391491362,
+      "updated": "2026-11-19T22:37:26.135637Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "Annual_NLCD_LndCov_2016_CU_C1V1": {
+      "href": "./Annual_NLCD_LndCov_2016_CU_C1V1.zip",
+      "type": "application/zip",
+      "title": "Land cover 2016",
+      "file:size": 1392930351,
+      "updated": "2026-11-19T22:39:39.516688Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "Annual_NLCD_LndCov_2017_CU_C1V1": {
+      "href": "./Annual_NLCD_LndCov_2017_CU_C1V1.zip",
+      "type": "application/zip",
+      "title": "Land cover 2017",
+      "file:size": 1395832154,
+      "updated": "2026-11-19T22:41:49.830273Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "Annual_NLCD_LndCov_2018_CU_C1V1": {
+      "href": "./Annual_NLCD_LndCov_2018_CU_C1V1.zip",
+      "type": "application/zip",
+      "title": "Land cover 2018",
+      "file:size": 1399305649,
+      "updated": "2026-11-19T22:44:02.220638Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "Annual_NLCD_LndCov_2019_CU_C1V1": {
+      "href": "./Annual_NLCD_LndCov_2019_CU_C1V1.zip",
+      "type": "application/zip",
+      "title": "Land cover 2019",
+      "file:size": 1402035309,
+      "updated": "2026-11-19T22:42:12.092202Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "Annual_NLCD_LndCov_2020_CU_C1V1": {
+      "href": "./Annual_NLCD_LndCov_2020_CU_C1V1.zip",
+      "type": "application/zip",
+      "title": "Land cover 2020",
+      "file:size": 1406426541,
+      "updated": "2026-11-19T22:45:18.947702Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "Annual_NLCD_LndCov_2021_CU_C1V1": {
+      "href": "./Annual_NLCD_LndCov_2021_CU_C1V1.zip",
+      "type": "application/zip",
+      "title": "Land cover 2021",
+      "file:size": 1412103201,
+      "updated": "2026-11-19T22:41:53.693336Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "Annual_NLCD_LndCov_2022_CU_C1V1": {
+      "href": "./Annual_NLCD_LndCov_2022_CU_C1V1.zip",
+      "type": "application/zip",
+      "title": "Land cover 2022",
+      "file:size": 1416767682,
+      "updated": "2026-11-19T22:44:22.288976Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "Annual_NLCD_LndCov_2023_CU_C1V1": {
+      "href": "./Annual_NLCD_LndCov_2023_CU_C1V1.zip",
+      "type": "application/zip",
+      "title": "Land cover 2023",
+      "file:size": 1427422471,
+      "updated": "2026-11-19T22:46:57.744370Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "Annual_NLCD_LndCov_2024_CU_C1V1": {
+      "href": "./Annual_NLCD_LndCov_2024_CU_C1V1.zip",
+      "type": "application/zip",
+      "title": "Land cover 2024",
+      "file:size": 1442142769,
+      "updated": "2026-11-19T22:44:40.874725Z",
+      "roles": [
+        "data"
+      ]
+    }
+  }
+}

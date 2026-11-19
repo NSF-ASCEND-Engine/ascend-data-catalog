@@ -23,6 +23,54 @@
       "title": "FEMA USA Structures (raw)"
     },
     {
+      "rel": "child",
+      "href": "./tiger/raw/catalog.json",
+      "type": "application/json",
+      "title": "Census TIGER/Line 2026 (raw)"
+    },
+    {
+      "rel": "child",
+      "href": "./cdc-svi/raw/catalog.json",
+      "type": "application/json",
+      "title": "CDC/ATSDR Social Vulnerability Index 2022 (raw)"
+    },
+    {
+      "rel": "child",
+      "href": "./pad-us/raw/catalog.json",
+      "type": "application/json",
+      "title": "PAD-US 4.1 (raw)"
+    },
+    {
+      "rel": "child",
+      "href": "./silvis-wui/raw/catalog.json",
+      "type": "application/json",
+      "title": "SILVIS wildland-urban interface 1990-2020 (raw)"
+    },
+    {
+      "rel": "child",
+      "href": "./camels/raw/catalog.json",
+      "type": "application/json",
+      "title": "CAMELS (raw)"
+    },
+    {
+      "rel": "child",
+      "href": "./wildfire-risk-to-communities/raw/catalog.json",
+      "type": "application/json",
+      "title": "Wildfire Risk to Communities, 2nd edition (raw)"
+    },
+    {
+      "rel": "child",
+      "href": "./usgs-3dep/raw/catalog.json",
+      "type": "application/json",
+      "title": "USGS 3DEP 1/3 arc-second DEM (raw)"
+    },
+    {
+      "rel": "child",
+      "href": "./nlcd/raw/catalog.json",
+      "type": "application/json",
+      "title": "Annual NLCD Collection 1.1 (raw)"
+    },
+    {
       "rel": "parent",
       "href": "./catalog.json",
       "type": "application/json",

@@ -1,0 +1,10 @@
+https://usfs-public.box.com/shared/static/7itw7p56vje2m0u3kqh91lt6kqq1i9l1.zip RDS-2020-0016-2_BP_CONUS.zip
+https://usfs-public.box.com/shared/static/7nb6hpw2rfc0zrhk1mv80fhbirajoqfd.zip RDS-2020-0016-2_CFL_CONUS.zip
+https://usfs-public.box.com/shared/static/v1wjt4r3pp0bjb05w8qfnlbm4y3m66q5.zip RDS-2020-0016-2_CRPS_CONUS.zip
+https://usfs-public.box.com/shared/static/nbmlha1iejzzjo9y3uoehln493o2c4ad.zip RDS-2020-0016-2_Exposure_CONUS.zip
+https://usfs-public.box.com/shared/static/502cm6vef6axhtljvy6b8p35tqugg2ds.zip RDS-2020-0016-2_FLEP4_CONUS.zip
+https://usfs-public.box.com/shared/static/gwasv734wwcx77zc4wj4ntfhaxyt8mel.zip RDS-2020-0016-2_FLEP8_CONUS.zip
+https://usfs-public.box.com/shared/static/88tv8byot0t22o9p1eqlrfqco3z5ouvf.zip RDS-2020-0016-2_RPS_CONUS.zip
+https://usfs-public.box.com/shared/static/jz74xh0eqdezblhexwu2s2at7fqgom8n.zip RDS-2020-0016-2_WHP_CONUS.zip
+https://usfs-public.box.com/shared/static/jh6l2x2blct82hbtmu4n6dvoe9bz25ap.zip RDS-2020-0016-2_Alaska.zip
+https://usfs-public.box.com/shared/static/fyv3pecykr26juimm2h1th4own1ehdj7.zip RDS-2020-0016-2_Hawaii.zip

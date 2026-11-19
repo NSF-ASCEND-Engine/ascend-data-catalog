@@ -1,0 +1,31 @@
+project:
+  type: website
+  render:
+    - index.md
+    - layout.md
+    - datasets/*.md
+
+website:
+  title: "ASCEND Data Catalog"
+  repo-url: https://github.com/NSF-ASCEND-Engine/ascend-data-catalog
+  navbar:
+    left:
+      - href: index.md
+        text: Datasets
+      - href: layout.md
+        text: Repository layout
+    tools:
+      - icon: github
+        href: https://github.com/NSF-ASCEND-Engine/ascend-data-catalog
+  sidebar:
+    style: docked
+    contents:
+      - index.md
+      - section: Datasets
+        contents: datasets/*.md
+      - layout.md
+
+format:
+  html:
+    theme: cosmo
+    toc: true

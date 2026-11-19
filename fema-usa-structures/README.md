@@ -22,7 +22,7 @@ Common columns: `OCC_CLS` and `PRIM_OCC` (occupancy class and type), `PROP_ADDR`
 ```python
 import geopandas as gpd
 
-path = "/project/cowy/data/fema-usa-structures/derived/usa_structures.parquet"
+path = "/project/cowy/ascend-data-catalog/fema-usa-structures/derived/usa_structures.parquet"
 gdf = gpd.read_parquet(path, bbox=(-105.3, 39.9, -105.2, 40.1))       # lon/lat
 wy = gpd.read_parquet(path, columns=["OCC_CLS", "HEIGHT", "geometry"],
                       filters=[("PROP_ST", "=", "Wyoming")])
@@ -31,7 +31,7 @@ wy = gpd.read_parquet(path, columns=["OCC_CLS", "HEIGHT", "geometry"],
 ```sql
 -- DuckDB
 SELECT OCC_CLS, count(*), sum(POP_MEDIAN)
-FROM '/project/cowy/data/fema-usa-structures/derived/usa_structures.parquet'
+FROM '/project/cowy/ascend-data-catalog/fema-usa-structures/derived/usa_structures.parquet'
 WHERE bbox.xmin < -105.2 AND bbox.xmax > -105.3 AND bbox.ymin < 40.1 AND bbox.ymax > 39.9
 GROUP BY 1;
 ```
@@ -43,7 +43,7 @@ Packages: `DuckDB`, `DataFrames`. `geometry` comes back as WKB bytes.
 ```julia
 using DuckDB, DataFrames
 
-path = "/project/cowy/data/fema-usa-structures/derived/usa_structures.parquet"
+path = "/project/cowy/ascend-data-catalog/fema-usa-structures/derived/usa_structures.parquet"
 con = DBInterface.connect(DuckDB.DB)
 df = DBInterface.execute(con, """
     SELECT OCC_CLS, HEIGHT, SQMETERS, POP_MEDIAN, geometry
@@ -70,7 +70,7 @@ library(duckdb)
 library(arrow)
 library(dplyr)
 
-path <- "/project/cowy/data/fema-usa-structures/derived/usa_structures.parquet"
+path <- "/project/cowy/ascend-data-catalog/fema-usa-structures/derived/usa_structures.parquet"
 
 con <- dbConnect(duckdb())
 df <- dbGetQuery(con, sprintf("

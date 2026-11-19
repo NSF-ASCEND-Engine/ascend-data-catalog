@@ -1,0 +1,2392 @@
+{
+  "type": "Collection",
+  "id": "tiger-raw",
+  "stac_version": "1.1.0",
+  "description": "Census Bureau TIGER/Line 2026 shapefile zips as downloaded by `_shared/scripts/download_raw.sh tiger` from the URLs in `scripts/urls.txt`: state, county, tract, bg, place, zcta520, aiannh, uac20, cbsa, primaryroads, prisecroads, rails. National layers are one zip (`tl_2026_us_<layer>.zip`); tract, bg, place and prisecroads are one zip per state or territory (`tl_2026_<FIPS>_<layer>.zip`). Geometries are EPSG:4269 (NAD83). Boundaries are as of January 1, 2026. Read-only.",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "cowy shared data"
+    },
+    {
+      "rel": "license",
+      "href": "https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-line-file.html",
+      "type": "text/html",
+      "title": "TIGER/Line Shapefiles"
+    },
+    {
+      "rel": "parent",
+      "href": "../../raw.json",
+      "type": "application/json",
+      "title": "Raw"
+    }
+  ],
+  "stac_extensions": [
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "title": "Census TIGER/Line 2026 (raw)",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -180.0,
+          -14.6,
+          180.0,
+          71.4
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2026-01-01T00:00:00Z",
+          "2026-01-01T00:00:00Z"
+        ]
+      ]
+    }
+  },
+  "license": "other",
+  "keywords": [
+    "boundaries",
+    "census",
+    "TIGER",
+    "counties",
+    "tracts",
+    "roads"
+  ],
+  "providers": [
+    {
+      "name": "U.S. Census Bureau",
+      "roles": [
+        "producer",
+        "licensor",
+        "host"
+      ],
+      "url": "https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-line-file.html"
+    }
+  ],
+  "assets": {
+    "tl_2026_01_bg": {
+      "href": "./tl_2026_01_bg.zip",
+      "type": "application/zip",
+      "title": "Block groups, state FIPS 01",
+      "file:size": 18763014,
+      "updated": "2026-11-19T22:15:31.231883Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_01_place": {
+      "href": "./tl_2026_01_place.zip",
+      "type": "application/zip",
+      "title": "Places, state FIPS 01",
+      "file:size": 5292481,
+      "updated": "2026-11-19T22:15:38.476804Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_01_prisecroads": {
+      "href": "./tl_2026_01_prisecroads.zip",
+      "type": "application/zip",
+      "title": "Primary and secondary roads, state FIPS 01",
+      "file:size": 6415377,
+      "updated": "2026-11-19T22:15:41.857613Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_01_tract": {
+      "href": "./tl_2026_01_tract.zip",
+      "type": "application/zip",
+      "title": "Census tracts, state FIPS 01",
+      "file:size": 11760835,
+      "updated": "2026-11-19T22:15:26.830232Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_02_bg": {
+      "href": "./tl_2026_02_bg.zip",
+      "type": "application/zip",
+      "title": "Block groups, state FIPS 02",
+      "file:size": 6678039,
+      "updated": "2026-11-19T22:15:31.330712Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_02_place": {
+      "href": "./tl_2026_02_place.zip",
+      "type": "application/zip",
+      "title": "Places, state FIPS 02",
+      "file:size": 2856510,
+      "updated": "2026-11-19T22:15:38.465310Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_02_prisecroads": {
+      "href": "./tl_2026_02_prisecroads.zip",
+      "type": "application/zip",
+      "title": "Primary and secondary roads, state FIPS 02",
+      "file:size": 1402441,
+      "updated": "2026-11-19T22:15:41.825992Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_02_tract": {
+      "href": "./tl_2026_02_tract.zip",
+      "type": "application/zip",
+      "title": "Census tracts, state FIPS 02",
+      "file:size": 3217493,
+      "updated": "2026-11-19T22:15:26.691710Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_04_bg": {
+      "href": "./tl_2026_04_bg.zip",
+      "type": "application/zip",
+      "title": "Block groups, state FIPS 04",
+      "file:size": 13304759,
+      "updated": "2026-11-19T22:15:30.638729Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_04_place": {
+      "href": "./tl_2026_04_place.zip",
+      "type": "application/zip",
+      "title": "Places, state FIPS 04",
+      "file:size": 2823203,
+      "updated": "2026-11-19T22:15:38.626369Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_04_prisecroads": {
+      "href": "./tl_2026_04_prisecroads.zip",
+      "type": "application/zip",
+      "title": "Primary and secondary roads, state FIPS 04",
+      "file:size": 2599099,
+      "updated": "2026-11-19T22:15:42.421000Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_04_tract": {
+      "href": "./tl_2026_04_tract.zip",
+      "type": "application/zip",
+      "title": "Census tracts, state FIPS 04",
+      "file:size": 8498659,
+      "updated": "2026-11-19T22:15:27.340585Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_05_bg": {
+      "href": "./tl_2026_05_bg.zip",
+      "type": "application/zip",
+      "title": "Block groups, state FIPS 05",
+      "file:size": 17242488,
+      "updated": "2026-11-19T22:15:31.242110Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_05_place": {
+      "href": "./tl_2026_05_place.zip",
+      "type": "application/zip",
+      "title": "Places, state FIPS 05",
+      "file:size": 2455776,
+      "updated": "2026-11-19T22:15:38.615259Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_05_prisecroads": {
+      "href": "./tl_2026_05_prisecroads.zip",
+      "type": "application/zip",
+      "title": "Primary and secondary roads, state FIPS 05",
+      "file:size": 8180767,
+      "updated": "2026-11-19T22:15:42.713509Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_05_tract": {
+      "href": "./tl_2026_05_tract.zip",
+      "type": "application/zip",
+      "title": "Census tracts, state FIPS 05",
+      "file:size": 10592755,
+      "updated": "2026-11-19T22:15:26.717035Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_06_bg": {
+      "href": "./tl_2026_06_bg.zip",
+      "type": "application/zip",
+      "title": "Block groups, state FIPS 06",
+      "file:size": 52832654,
+      "updated": "2026-11-19T22:15:32.083071Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_06_place": {
+      "href": "./tl_2026_06_place.zip",
+      "type": "application/zip",
+      "title": "Places, state FIPS 06",
+      "file:size": 9914946,
+      "updated": "2026-11-19T22:15:38.959058Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_06_prisecroads": {
+      "href": "./tl_2026_06_prisecroads.zip",
+      "type": "application/zip",
+      "title": "Primary and secondary roads, state FIPS 06",
+      "file:size": 12720908,
+      "updated": "2026-11-19T22:15:42.296791Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_06_tract": {
+      "href": "./tl_2026_06_tract.zip",
+      "type": "application/zip",
+      "title": "Census tracts, state FIPS 06",
+      "file:size": 32523391,
+      "updated": "2026-11-19T22:15:26.956578Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_08_bg": {
+      "href": "./tl_2026_08_bg.zip",
+      "type": "application/zip",
+      "title": "Block groups, state FIPS 08",
+      "file:size": 13603815,
+      "updated": "2026-11-19T22:15:30.951058Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_08_place": {
+      "href": "./tl_2026_08_place.zip",
+      "type": "application/zip",
+      "title": "Places, state FIPS 08",
+      "file:size": 2802569,
+      "updated": "2026-11-19T22:15:39.026052Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_08_prisecroads": {
+      "href": "./tl_2026_08_prisecroads.zip",
+      "type": "application/zip",
+      "title": "Primary and secondary roads, state FIPS 08",
+      "file:size": 3895202,
+      "updated": "2026-11-19T22:15:42.323706Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_08_tract": {
+      "href": "./tl_2026_08_tract.zip",
+      "type": "application/zip",
+      "title": "Census tracts, state FIPS 08",
+      "file:size": 8389247,
+      "updated": "2026-11-19T22:15:26.735774Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_09_bg": {
+      "href": "./tl_2026_09_bg.zip",
+      "type": "application/zip",
+      "title": "Block groups, state FIPS 09",
+      "file:size": 5780565,
+      "updated": "2026-11-19T22:15:31.289663Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_09_place": {
+      "href": "./tl_2026_09_place.zip",
+      "type": "application/zip",
+      "title": "Places, state FIPS 09",
+      "file:size": 885964,
+      "updated": "2026-11-19T22:15:38.943363Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_09_prisecroads": {
+      "href": "./tl_2026_09_prisecroads.zip",
+      "type": "application/zip",
+      "title": "Primary and secondary roads, state FIPS 09",
+      "file:size": 3685211,
+      "updated": "2026-11-19T22:15:42.985108Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_09_tract": {
+      "href": "./tl_2026_09_tract.zip",
+      "type": "application/zip",
+      "title": "Census tracts, state FIPS 09",
+      "file:size": 2750687,
+      "updated": "2026-11-19T22:15:27.088271Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_10_bg": {
+      "href": "./tl_2026_10_bg.zip",
+      "type": "application/zip",
+      "title": "Block groups, state FIPS 10",
+      "file:size": 1838707,
+      "updated": "2026-11-19T22:15:31.080134Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_10_place": {
+      "href": "./tl_2026_10_place.zip",
+      "type": "application/zip",
+      "title": "Places, state FIPS 10",
+      "file:size": 452896,
+      "updated": "2026-11-19T22:15:39.091368Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_10_prisecroads": {
+      "href": "./tl_2026_10_prisecroads.zip",
+      "type": "application/zip",
+      "title": "Primary and secondary roads, state FIPS 10",
+      "file:size": 1229606,
+      "updated": "2026-11-19T22:15:43.046569Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_10_tract": {
+      "href": "./tl_2026_10_tract.zip",
+      "type": "application/zip",
+      "title": "Census tracts, state FIPS 10",
+      "file:size": 1110106,
+      "updated": "2026-11-19T22:15:27.161808Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_11_bg": {
+      "href": "./tl_2026_11_bg.zip",
+      "type": "application/zip",
+      "title": "Block groups, state FIPS 11",
+      "file:size": 568121,
+      "updated": "2026-11-19T22:15:31.341535Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_11_place": {
+      "href": "./tl_2026_11_place.zip",
+      "type": "application/zip",
+      "title": "Places, state FIPS 11",
+      "file:size": 86352,
+      "updated": "2026-11-19T22:15:39.160185Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_11_prisecroads": {
+      "href": "./tl_2026_11_prisecroads.zip",
+      "type": "application/zip",
+      "title": "Primary and secondary roads, state FIPS 11",
+      "file:size": 84866,
+      "updated": "2026-11-19T22:15:42.935712Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_11_tract": {
+      "href": "./tl_2026_11_tract.zip",
+      "type": "application/zip",
+      "title": "Census tracts, state FIPS 11",
+      "file:size": 375672,
+      "updated": "2026-11-19T22:15:27.108559Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_12_bg": {
+      "href": "./tl_2026_12_bg.zip",
+      "type": "application/zip",
+      "title": "Block groups, state FIPS 12",
+      "file:size": 22518566,
+      "updated": "2026-11-19T22:15:32.606020Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_12_place": {
+      "href": "./tl_2026_12_place.zip",
+      "type": "application/zip",
+      "title": "Places, state FIPS 12",
+      "file:size": 7126286,
+      "updated": "2026-11-19T22:15:39.157004Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_12_prisecroads": {
+      "href": "./tl_2026_12_prisecroads.zip",
+      "type": "application/zip",
+      "title": "Primary and secondary roads, state FIPS 12",
+      "file:size": 8556097,
+      "updated": "2026-11-19T22:15:42.860546Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_12_tract": {
+      "href": "./tl_2026_12_tract.zip",
+      "type": "application/zip",
+      "title": "Census tracts, state FIPS 12",
+      "file:size": 13802246,
+      "updated": "2026-11-19T22:15:27.429275Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_13_bg": {
+      "href": "./tl_2026_13_bg.zip",
+      "type": "application/zip",
+      "title": "Block groups, state FIPS 13",
+      "file:size": 24499862,
+      "updated": "2026-11-19T22:15:32.497094Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_13_place": {
+      "href": "./tl_2026_13_place.zip",
+      "type": "application/zip",
+      "title": "Places, state FIPS 13",
+      "file:size": 5267929,
+      "updated": "2026-11-19T22:15:39.366223Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_13_prisecroads": {
+      "href": "./tl_2026_13_prisecroads.zip",
+      "type": "application/zip",
+      "title": "Primary and secondary roads, state FIPS 13",
+      "file:size": 10140073,
+      "updated": "2026-11-19T22:15:42.928940Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_13_tract": {
+      "href": "./tl_2026_13_tract.zip",
+      "type": "application/zip",
+      "title": "Census tracts, state FIPS 13",
+      "file:size": 16077034,
+      "updated": "2026-11-19T22:15:27.488742Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_15_bg": {
+      "href": "./tl_2026_15_bg.zip",
+      "type": "application/zip",
+      "title": "Block groups, state FIPS 15",
+      "file:size": 2854822,
+      "updated": "2026-11-19T22:15:32.172928Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_15_place": {
+      "href": "./tl_2026_15_place.zip",
+      "type": "application/zip",
+      "title": "Places, state FIPS 15",
+      "file:size": 758810,
+      "updated": "2026-11-19T22:15:39.280149Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_15_prisecroads": {
+      "href": "./tl_2026_15_prisecroads.zip",
+      "type": "application/zip",
+      "title": "Primary and secondary roads, state FIPS 15",
+      "file:size": 1500413,
+      "updated": "2026-11-19T22:15:43.762084Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_15_tract": {
+      "href": "./tl_2026_15_tract.zip",
+      "type": "application/zip",
+      "title": "Census tracts, state FIPS 15",
+      "file:size": 1766795,
+      "updated": "2026-11-19T22:15:27.455170Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_16_bg": {
+      "href": "./tl_2026_16_bg.zip",
+      "type": "application/zip",
+      "title": "Block groups, state FIPS 16",
+      "file:size": 7872436,
+      "updated": "2026-11-19T22:15:32.870829Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_16_place": {
+      "href": "./tl_2026_16_place.zip",
+      "type": "application/zip",
+      "title": "Places, state FIPS 16",
+      "file:size": 1057756,
+      "updated": "2026-11-19T22:15:39.474316Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_16_prisecroads": {
+      "href": "./tl_2026_16_prisecroads.zip",
+      "type": "application/zip",
+      "title": "Primary and secondary roads, state FIPS 16",
+      "file:size": 2097417,
+      "updated": "2026-11-19T22:15:43.680071Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_16_tract": {
+      "href": "./tl_2026_16_tract.zip",
+      "type": "application/zip",
+      "title": "Census tracts, state FIPS 16",
+      "file:size": 4867928,
+      "updated": "2026-11-19T22:15:27.497472Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_17_bg": {
+      "href": "./tl_2026_17_bg.zip",
+      "type": "application/zip",
+      "title": "Block groups, state FIPS 17",
+      "file:size": 18411376,
+      "updated": "2026-11-19T22:15:32.508342Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_17_place": {
+      "href": "./tl_2026_17_place.zip",
+      "type": "application/zip",
+      "title": "Places, state FIPS 17",
+      "file:size": 6176356,
+      "updated": "2026-11-19T22:15:39.483927Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_17_prisecroads": {
+      "href": "./tl_2026_17_prisecroads.zip",
+      "type": "application/zip",
+      "title": "Primary and secondary roads, state FIPS 17",
+      "file:size": 6959450,
+      "updated": "2026-11-19T22:15:44.078802Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_17_tract": {
+      "href": "./tl_2026_17_tract.zip",
+      "type": "application/zip",
+      "title": "Census tracts, state FIPS 17",
+      "file:size": 10101787,
+      "updated": "2026-11-19T22:15:27.736951Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_18_bg": {
+      "href": "./tl_2026_18_bg.zip",
+      "type": "application/zip",
+      "title": "Block groups, state FIPS 18",
+      "file:size": 12173917,
+      "updated": "2026-11-19T22:15:32.466044Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_18_place": {
+      "href": "./tl_2026_18_place.zip",
+      "type": "application/zip",
+      "title": "Places, state FIPS 18",
+      "file:size": 2439734,
+      "updated": "2026-11-19T22:15:39.452982Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_18_prisecroads": {
+      "href": "./tl_2026_18_prisecroads.zip",
+      "type": "application/zip",
+      "title": "Primary and secondary roads, state FIPS 18",
+      "file:size": 6099398,
+      "updated": "2026-11-19T22:15:43.517181Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_18_tract": {
+      "href": "./tl_2026_18_tract.zip",
+      "type": "application/zip",
+      "title": "Census tracts, state FIPS 18",
+      "file:size": 6364625,
+      "updated": "2026-11-19T22:15:27.673122Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_19_bg": {
+      "href": "./tl_2026_19_bg.zip",
+      "type": "application/zip",
+      "title": "Block groups, state FIPS 19",
+      "file:size": 7562578,
+      "updated": "2026-11-19T22:15:32.207798Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_19_place": {
+      "href": "./tl_2026_19_place.zip",
+      "type": "application/zip",
+      "title": "Places, state FIPS 19",
+      "file:size": 1903511,
+      "updated": "2026-11-19T22:15:39.563581Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_19_prisecroads": {
+      "href": "./tl_2026_19_prisecroads.zip",
+      "type": "application/zip",
+      "title": "Primary and secondary roads, state FIPS 19",
+      "file:size": 3095994,
+      "updated": "2026-11-19T22:15:43.888988Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_19_tract": {
+      "href": "./tl_2026_19_tract.zip",
+      "type": "application/zip",
+      "title": "Census tracts, state FIPS 19",
+      "file:size": 4142953,
+      "updated": "2026-11-19T22:15:27.816503Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_20_bg": {
+      "href": "./tl_2026_20_bg.zip",
+      "type": "application/zip",
+      "title": "Block groups, state FIPS 20",
+      "file:size": 5663336,
+      "updated": "2026-11-19T22:15:33.498063Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_20_place": {
+      "href": "./tl_2026_20_place.zip",
+      "type": "application/zip",
+      "title": "Places, state FIPS 20",
+      "file:size": 1678130,
+      "updated": "2026-11-19T22:15:39.558867Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_20_prisecroads": {
+      "href": "./tl_2026_20_prisecroads.zip",
+      "type": "application/zip",
+      "title": "Primary and secondary roads, state FIPS 20",
+      "file:size": 3038671,
+      "updated": "2026-11-19T22:15:43.420967Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_20_tract": {
+      "href": "./tl_2026_20_tract.zip",
+      "type": "application/zip",
+      "title": "Census tracts, state FIPS 20",
+      "file:size": 3179679,
+      "updated": "2026-11-19T22:15:27.850979Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_21_bg": {
+      "href": "./tl_2026_21_bg.zip",
+      "type": "application/zip",
+      "title": "Block groups, state FIPS 21",
+      "file:size": 23000870,
+      "updated": "2026-11-19T22:15:33.410411Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_21_place": {
+      "href": "./tl_2026_21_place.zip",
+      "type": "application/zip",
+      "title": "Places, state FIPS 21",
+      "file:size": 2804341,
+      "updated": "2026-11-19T22:15:39.765807Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_21_prisecroads": {
+      "href": "./tl_2026_21_prisecroads.zip",
+      "type": "application/zip",
+      "title": "Primary and secondary roads, state FIPS 21",
+      "file:size": 24213595,
+      "updated": "2026-11-19T22:15:43.573955Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_21_tract": {
+      "href": "./tl_2026_21_tract.zip",
+      "type": "application/zip",
+      "title": "Census tracts, state FIPS 21",
+      "file:size": 13268297,
+      "updated": "2026-11-19T22:15:27.967941Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_22_bg": {
+      "href": "./tl_2026_22_bg.zip",
+      "type": "application/zip",
+      "title": "Block groups, state FIPS 22",
+      "file:size": 13922726,
+      "updated": "2026-11-19T22:15:33.907304Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_22_place": {
+      "href": "./tl_2026_22_place.zip",
+      "type": "application/zip",
+      "title": "Places, state FIPS 22",
+      "file:size": 1955358,
+      "updated": "2026-11-19T22:15:39.765454Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_22_prisecroads": {
+      "href": "./tl_2026_22_prisecroads.zip",
+      "type": "application/zip",
+      "title": "Primary and secondary roads, state FIPS 22",
+      "file:size": 8458904,
+      "updated": "2026-11-19T22:15:44.301229Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_22_tract": {
+      "href": "./tl_2026_22_tract.zip",
+      "type": "application/zip",
+      "title": "Census tracts, state FIPS 22",
+      "file:size": 8336288,
+      "updated": "2026-11-19T22:15:28.742135Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_23_bg": {
+      "href": "./tl_2026_23_bg.zip",
+      "type": "application/zip",
+      "title": "Block groups, state FIPS 23",
+      "file:size": 5407188,
+      "updated": "2026-11-19T22:15:33.409034Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_23_place": {
+      "href": "./tl_2026_23_place.zip",
+      "type": "application/zip",
+      "title": "Places, state FIPS 23",
+      "file:size": 679550,
+      "updated": "2026-11-19T22:15:39.725950Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_23_prisecroads": {
+      "href": "./tl_2026_23_prisecroads.zip",
+      "type": "application/zip",
+      "title": "Primary and secondary roads, state FIPS 23",
+      "file:size": 5459890,
+      "updated": "2026-11-19T22:15:44.354524Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_23_tract": {
+      "href": "./tl_2026_23_tract.zip",
+      "type": "application/zip",
+      "title": "Census tracts, state FIPS 23",
+      "file:size": 3139711,
+      "updated": "2026-11-19T22:15:27.992143Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_24_bg": {
+      "href": "./tl_2026_24_bg.zip",
+      "type": "application/zip",
+      "title": "Block groups, state FIPS 24",
+      "file:size": 9751986,
+      "updated": "2026-11-19T22:15:33.637748Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_24_place": {
+      "href": "./tl_2026_24_place.zip",
+      "type": "application/zip",
+      "title": "Places, state FIPS 24",
+      "file:size": 2743995,
+      "updated": "2026-11-19T22:15:39.861286Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_24_prisecroads": {
+      "href": "./tl_2026_24_prisecroads.zip",
+      "type": "application/zip",
+      "title": "Primary and secondary roads, state FIPS 24",
+      "file:size": 5246194,
+      "updated": "2026-11-19T22:15:44.766395Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_24_tract": {
+      "href": "./tl_2026_24_tract.zip",
+      "type": "application/zip",
+      "title": "Census tracts, state FIPS 24",
+      "file:size": 5866600,
+      "updated": "2026-11-19T22:15:28.150310Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_25_bg": {
+      "href": "./tl_2026_25_bg.zip",
+      "type": "application/zip",
+      "title": "Block groups, state FIPS 25",
+      "file:size": 8852952,
+      "updated": "2026-11-19T22:15:33.735991Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_25_place": {
+      "href": "./tl_2026_25_place.zip",
+      "type": "application/zip",
+      "title": "Places, state FIPS 25",
+      "file:size": 1191528,
+      "updated": "2026-11-19T22:15:39.790760Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_25_prisecroads": {
+      "href": "./tl_2026_25_prisecroads.zip",
+      "type": "application/zip",
+      "title": "Primary and secondary roads, state FIPS 25",
+      "file:size": 4407756,
+      "updated": "2026-11-19T22:15:44.823135Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_25_tract": {
+      "href": "./tl_2026_25_tract.zip",
+      "type": "application/zip",
+      "title": "Census tracts, state FIPS 25",
+      "file:size": 4556747,
+      "updated": "2026-11-19T22:15:28.195156Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_26_bg": {
+      "href": "./tl_2026_26_bg.zip",
+      "type": "application/zip",
+      "title": "Block groups, state FIPS 26",
+      "file:size": 10346128,
+      "updated": "2026-11-19T22:15:33.690601Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_26_place": {
+      "href": "./tl_2026_26_place.zip",
+      "type": "application/zip",
+      "title": "Places, state FIPS 26",
+      "file:size": 1484959,
+      "updated": "2026-11-19T22:15:39.911452Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_26_prisecroads": {
+      "href": "./tl_2026_26_prisecroads.zip",
+      "type": "application/zip",
+      "title": "Primary and secondary roads, state FIPS 26",
+      "file:size": 3298156,
+      "updated": "2026-11-19T22:15:44.200408Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_26_tract": {
+      "href": "./tl_2026_26_tract.zip",
+      "type": "application/zip",
+      "title": "Census tracts, state FIPS 26",
+      "file:size": 5703288,
+      "updated": "2026-11-19T22:15:28.350181Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_27_bg": {
+      "href": "./tl_2026_27_bg.zip",
+      "type": "application/zip",
+      "title": "Block groups, state FIPS 27",
+      "file:size": 13182440,
+      "updated": "2026-11-19T22:15:33.788620Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_27_place": {
+      "href": "./tl_2026_27_place.zip",
+      "type": "application/zip",
+      "title": "Places, state FIPS 27",
+      "file:size": 2560853,
+      "updated": "2026-11-19T22:15:39.961343Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_27_prisecroads": {
+      "href": "./tl_2026_27_prisecroads.zip",
+      "type": "application/zip",
+      "title": "Primary and secondary roads, state FIPS 27",
+      "file:size": 4057659,
+      "updated": "2026-11-19T22:15:44.886553Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_27_tract": {
+      "href": "./tl_2026_27_tract.zip",
+      "type": "application/zip",
+      "title": "Census tracts, state FIPS 27",
+      "file:size": 7554809,
+      "updated": "2026-11-19T22:15:28.346880Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_28_bg": {
+      "href": "./tl_2026_28_bg.zip",
+      "type": "application/zip",
+      "title": "Block groups, state FIPS 28",
+      "file:size": 16448552,
+      "updated": "2026-11-19T22:15:34.695374Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_28_place": {
+      "href": "./tl_2026_28_place.zip",
+      "type": "application/zip",
+      "title": "Places, state FIPS 28",
+      "file:size": 1511574,
+      "updated": "2026-11-19T22:15:39.932745Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_28_prisecroads": {
+      "href": "./tl_2026_28_prisecroads.zip",
+      "type": "application/zip",
+      "title": "Primary and secondary roads, state FIPS 28",
+      "file:size": 5932464,
+      "updated": "2026-11-19T22:15:44.907585Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_28_tract": {
+      "href": "./tl_2026_28_tract.zip",
+      "type": "application/zip",
+      "title": "Census tracts, state FIPS 28",
+      "file:size": 9706406,
+      "updated": "2026-11-19T22:15:28.433674Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_29_bg": {
+      "href": "./tl_2026_29_bg.zip",
+      "type": "application/zip",
+      "title": "Block groups, state FIPS 29",
+      "file:size": 19216862,
+      "updated": "2026-11-19T22:15:34.794176Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_29_place": {
+      "href": "./tl_2026_29_place.zip",
+      "type": "application/zip",
+      "title": "Places, state FIPS 29",
+      "file:size": 3099569,
+      "updated": "2026-11-19T22:15:40.122233Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_29_prisecroads": {
+      "href": "./tl_2026_29_prisecroads.zip",
+      "type": "application/zip",
+      "title": "Primary and secondary roads, state FIPS 29",
+      "file:size": 6057767,
+      "updated": "2026-11-19T22:15:44.770221Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_29_tract": {
+      "href": "./tl_2026_29_tract.zip",
+      "type": "application/zip",
+      "title": "Census tracts, state FIPS 29",
+      "file:size": 10617351,
+      "updated": "2026-11-19T22:15:28.450958Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_30_bg": {
+      "href": "./tl_2026_30_bg.zip",
+      "type": "application/zip",
+      "title": "Block groups, state FIPS 30",
+      "file:size": 10656417,
+      "updated": "2026-11-19T22:15:34.392406Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_30_place": {
+      "href": "./tl_2026_30_place.zip",
+      "type": "application/zip",
+      "title": "Places, state FIPS 30",
+      "file:size": 2262364,
+      "updated": "2026-11-19T22:15:40.186064Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_30_prisecroads": {
+      "href": "./tl_2026_30_prisecroads.zip",
+      "type": "application/zip",
+      "title": "Primary and secondary roads, state FIPS 30",
+      "file:size": 2615588,
+      "updated": "2026-11-19T22:15:45.189680Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_30_tract": {
+      "href": "./tl_2026_30_tract.zip",
+      "type": "application/zip",
+      "title": "Census tracts, state FIPS 30",
+      "file:size": 7031331,
+      "updated": "2026-11-19T22:15:28.618665Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_31_bg": {
+      "href": "./tl_2026_31_bg.zip",
+      "type": "application/zip",
+      "title": "Block groups, state FIPS 31",
+      "file:size": 4084263,
+      "updated": "2026-11-19T22:15:34.660076Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_31_place": {
+      "href": "./tl_2026_31_place.zip",
+      "type": "application/zip",
+      "title": "Places, state FIPS 31",
+      "file:size": 829720,
+      "updated": "2026-11-19T22:15:40.199071Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_31_prisecroads": {
+      "href": "./tl_2026_31_prisecroads.zip",
+      "type": "application/zip",
+      "title": "Primary and secondary roads, state FIPS 31",
+      "file:size": 2508594,
+      "updated": "2026-11-19T22:15:44.999573Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_31_tract": {
+      "href": "./tl_2026_31_tract.zip",
+      "type": "application/zip",
+      "title": "Census tracts, state FIPS 31",
+      "file:size": 2278891,
+      "updated": "2026-11-19T22:15:28.572992Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_32_bg": {
+      "href": "./tl_2026_32_bg.zip",
+      "type": "application/zip",
+      "title": "Block groups, state FIPS 32",
+      "file:size": 4866562,
+      "updated": "2026-11-19T22:15:34.932055Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_32_place": {
+      "href": "./tl_2026_32_place.zip",
+      "type": "application/zip",
+      "title": "Places, state FIPS 32",
+      "file:size": 850132,
+      "updated": "2026-11-19T22:15:40.129354Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_32_prisecroads": {
+      "href": "./tl_2026_32_prisecroads.zip",
+      "type": "application/zip",
+      "title": "Primary and secondary roads, state FIPS 32",
+      "file:size": 2039864,
+      "updated": "2026-11-19T22:15:45.134728Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_32_tract": {
+      "href": "./tl_2026_32_tract.zip",
+      "type": "application/zip",
+      "title": "Census tracts, state FIPS 32",
+      "file:size": 3219196,
+      "updated": "2026-11-19T22:15:28.564608Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_33_bg": {
+      "href": "./tl_2026_33_bg.zip",
+      "type": "application/zip",
+      "title": "Block groups, state FIPS 33",
+      "file:size": 3040649,
+      "updated": "2026-11-19T22:15:34.896718Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_33_place": {
+      "href": "./tl_2026_33_place.zip",
+      "type": "application/zip",
+      "title": "Places, state FIPS 33",
+      "file:size": 378912,
+      "updated": "2026-11-19T22:15:40.177841Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_33_prisecroads": {
+      "href": "./tl_2026_33_prisecroads.zip",
+      "type": "application/zip",
+      "title": "Primary and secondary roads, state FIPS 33",
+      "file:size": 2518573,
+      "updated": "2026-11-19T22:15:45.786942Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_33_tract": {
+      "href": "./tl_2026_33_tract.zip",
+      "type": "application/zip",
+      "title": "Census tracts, state FIPS 33",
+      "file:size": 1532639,
+      "updated": "2026-11-19T22:15:28.859051Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_34_bg": {
+      "href": "./tl_2026_34_bg.zip",
+      "type": "application/zip",
+      "title": "Block groups, state FIPS 34",
+      "file:size": 11104997,
+      "updated": "2026-11-19T22:15:35.185555Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_34_place": {
+      "href": "./tl_2026_34_place.zip",
+      "type": "application/zip",
+      "title": "Places, state FIPS 34",
+      "file:size": 2942440,
+      "updated": "2026-11-19T22:15:40.301924Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_34_prisecroads": {
+      "href": "./tl_2026_34_prisecroads.zip",
+      "type": "application/zip",
+      "title": "Primary and secondary roads, state FIPS 34",
+      "file:size": 2388969,
+      "updated": "2026-11-19T22:15:45.239678Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_34_tract": {
+      "href": "./tl_2026_34_tract.zip",
+      "type": "application/zip",
+      "title": "Census tracts, state FIPS 34",
+      "file:size": 7159444,
+      "updated": "2026-11-19T22:15:28.861131Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_35_bg": {
+      "href": "./tl_2026_35_bg.zip",
+      "type": "application/zip",
+      "title": "Block groups, state FIPS 35",
+      "file:size": 8011380,
+      "updated": "2026-11-19T22:15:35.101751Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_35_place": {
+      "href": "./tl_2026_35_place.zip",
+      "type": "application/zip",
+      "title": "Places, state FIPS 35",
+      "file:size": 2363839,
+      "updated": "2026-11-19T22:15:40.351148Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_35_prisecroads": {
+      "href": "./tl_2026_35_prisecroads.zip",
+      "type": "application/zip",
+      "title": "Primary and secondary roads, state FIPS 35",
+      "file:size": 3955082,
+      "updated": "2026-11-19T22:15:45.789471Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_35_tract": {
+      "href": "./tl_2026_35_tract.zip",
+      "type": "application/zip",
+      "title": "Census tracts, state FIPS 35",
+      "file:size": 4971172,
+      "updated": "2026-11-19T22:15:28.939163Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_36_bg": {
+      "href": "./tl_2026_36_bg.zip",
+      "type": "application/zip",
+      "title": "Block groups, state FIPS 36",
+      "file:size": 17853662,
+      "updated": "2026-11-19T22:15:35.692859Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_36_place": {
+      "href": "./tl_2026_36_place.zip",
+      "type": "application/zip",
+      "title": "Places, state FIPS 36",
+      "file:size": 3381954,
+      "updated": "2026-11-19T22:15:40.479419Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_36_prisecroads": {
+      "href": "./tl_2026_36_prisecroads.zip",
+      "type": "application/zip",
+      "title": "Primary and secondary roads, state FIPS 36",
+      "file:size": 8174679,
+      "updated": "2026-11-19T22:15:46.239259Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_36_tract": {
+      "href": "./tl_2026_36_tract.zip",
+      "type": "application/zip",
+      "title": "Census tracts, state FIPS 36",
+      "file:size": 8956944,
+      "updated": "2026-11-19T22:15:29.005533Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_37_bg": {
+      "href": "./tl_2026_37_bg.zip",
+      "type": "application/zip",
+      "title": "Block groups, state FIPS 37",
+      "file:size": 32253705,
+      "updated": "2026-11-19T22:15:36.270705Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_37_place": {
+      "href": "./tl_2026_37_place.zip",
+      "type": "application/zip",
+      "title": "Places, state FIPS 37",
+      "file:size": 8853690,
+      "updated": "2026-11-19T22:15:40.572751Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_37_prisecroads": {
+      "href": "./tl_2026_37_prisecroads.zip",
+      "type": "application/zip",
+      "title": "Primary and secondary roads, state FIPS 37",
+      "file:size": 10389179,
+      "updated": "2026-11-19T22:15:45.972391Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_37_tract": {
+      "href": "./tl_2026_37_tract.zip",
+      "type": "application/zip",
+      "title": "Census tracts, state FIPS 37",
+      "file:size": 20251372,
+      "updated": "2026-11-19T22:15:29.080839Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_38_bg": {
+      "href": "./tl_2026_38_bg.zip",
+      "type": "application/zip",
+      "title": "Block groups, state FIPS 38",
+      "file:size": 2585504,
+      "updated": "2026-11-19T22:15:35.506451Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_38_place": {
+      "href": "./tl_2026_38_place.zip",
+      "type": "application/zip",
+      "title": "Places, state FIPS 38",
+      "file:size": 538929,
+      "updated": "2026-11-19T22:15:40.453298Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_38_prisecroads": {
+      "href": "./tl_2026_38_prisecroads.zip",
+      "type": "application/zip",
+      "title": "Primary and secondary roads, state FIPS 38",
+      "file:size": 1859480,
+      "updated": "2026-11-19T22:15:45.840525Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_38_tract": {
+      "href": "./tl_2026_38_tract.zip",
+      "type": "application/zip",
+      "title": "Census tracts, state FIPS 38",
+      "file:size": 1827576,
+      "updated": "2026-11-19T22:15:29.050217Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_39_bg": {
+      "href": "./tl_2026_39_bg.zip",
+      "type": "application/zip",
+      "title": "Block groups, state FIPS 39",
+      "file:size": 19169952,
+      "updated": "2026-11-19T22:15:35.910304Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_39_place": {
+      "href": "./tl_2026_39_place.zip",
+      "type": "application/zip",
+      "title": "Places, state FIPS 39",
+      "file:size": 4095091,
+      "updated": "2026-11-19T22:15:40.689771Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_39_prisecroads": {
+      "href": "./tl_2026_39_prisecroads.zip",
+      "type": "application/zip",
+      "title": "Primary and secondary roads, state FIPS 39",
+      "file:size": 10470086,
+      "updated": "2026-11-19T22:15:45.595162Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_39_tract": {
+      "href": "./tl_2026_39_tract.zip",
+      "type": "application/zip",
+      "title": "Census tracts, state FIPS 39",
+      "file:size": 9623728,
+      "updated": "2026-11-19T22:15:29.075122Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_40_bg": {
+      "href": "./tl_2026_40_bg.zip",
+      "type": "application/zip",
+      "title": "Block groups, state FIPS 40",
+      "file:size": 10809845,
+      "updated": "2026-11-19T22:15:35.988509Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_40_place": {
+      "href": "./tl_2026_40_place.zip",
+      "type": "application/zip",
+      "title": "Places, state FIPS 40",
+      "file:size": 2945260,
+      "updated": "2026-11-19T22:15:40.595803Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_40_prisecroads": {
+      "href": "./tl_2026_40_prisecroads.zip",
+      "type": "application/zip",
+      "title": "Primary and secondary roads, state FIPS 40",
+      "file:size": 4606681,
+      "updated": "2026-11-19T22:15:46.311694Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_40_tract": {
+      "href": "./tl_2026_40_tract.zip",
+      "type": "application/zip",
+      "title": "Census tracts, state FIPS 40",
+      "file:size": 6938840,
+      "updated": "2026-11-19T22:15:29.209956Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_41_bg": {
+      "href": "./tl_2026_41_bg.zip",
+      "type": "application/zip",
+      "title": "Block groups, state FIPS 41",
+      "file:size": 17009082,
+      "updated": "2026-11-19T22:15:35.471864Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_41_place": {
+      "href": "./tl_2026_41_place.zip",
+      "type": "application/zip",
+      "title": "Places, state FIPS 41",
+      "file:size": 2371332,
+      "updated": "2026-11-19T22:15:40.683578Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_41_prisecroads": {
+      "href": "./tl_2026_41_prisecroads.zip",
+      "type": "application/zip",
+      "title": "Primary and secondary roads, state FIPS 41",
+      "file:size": 5892837,
+      "updated": "2026-11-19T22:15:46.300307Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_41_tract": {
+      "href": "./tl_2026_41_tract.zip",
+      "type": "application/zip",
+      "title": "Census tracts, state FIPS 41",
+      "file:size": 10699408,
+      "updated": "2026-11-19T22:15:29.331812Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_42_bg": {
+      "href": "./tl_2026_42_bg.zip",
+      "type": "application/zip",
+      "title": "Block groups, state FIPS 42",
+      "file:size": 24923106,
+      "updated": "2026-11-19T22:15:36.668151Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_42_place": {
+      "href": "./tl_2026_42_place.zip",
+      "type": "application/zip",
+      "title": "Places, state FIPS 42",
+      "file:size": 4578880,
+      "updated": "2026-11-19T22:15:40.795415Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_42_prisecroads": {
+      "href": "./tl_2026_42_prisecroads.zip",
+      "type": "application/zip",
+      "title": "Primary and secondary roads, state FIPS 42",
+      "file:size": 15478180,
+      "updated": "2026-11-19T22:15:46.846354Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_42_tract": {
+      "href": "./tl_2026_42_tract.zip",
+      "type": "application/zip",
+      "title": "Census tracts, state FIPS 42",
+      "file:size": 13118116,
+      "updated": "2026-11-19T22:15:29.320037Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_44_bg": {
+      "href": "./tl_2026_44_bg.zip",
+      "type": "application/zip",
+      "title": "Block groups, state FIPS 44",
+      "file:size": 1452179,
+      "updated": "2026-11-19T22:15:36.223134Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_44_place": {
+      "href": "./tl_2026_44_place.zip",
+      "type": "application/zip",
+      "title": "Places, state FIPS 44",
+      "file:size": 295074,
+      "updated": "2026-11-19T22:15:40.716684Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_44_prisecroads": {
+      "href": "./tl_2026_44_prisecroads.zip",
+      "type": "application/zip",
+      "title": "Primary and secondary roads, state FIPS 44",
+      "file:size": 839451,
+      "updated": "2026-11-19T22:15:46.441633Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_44_tract": {
+      "href": "./tl_2026_44_tract.zip",
+      "type": "application/zip",
+      "title": "Census tracts, state FIPS 44",
+      "file:size": 846230,
+      "updated": "2026-11-19T22:15:29.304350Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_45_bg": {
+      "href": "./tl_2026_45_bg.zip",
+      "type": "application/zip",
+      "title": "Block groups, state FIPS 45",
+      "file:size": 15815299,
+      "updated": "2026-11-19T22:15:36.983106Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_45_place": {
+      "href": "./tl_2026_45_place.zip",
+      "type": "application/zip",
+      "title": "Places, state FIPS 45",
+      "file:size": 5244877,
+      "updated": "2026-11-19T22:15:40.965946Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_45_prisecroads": {
+      "href": "./tl_2026_45_prisecroads.zip",
+      "type": "application/zip",
+      "title": "Primary and secondary roads, state FIPS 45",
+      "file:size": 7005667,
+      "updated": "2026-11-19T22:15:46.731566Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_45_tract": {
+      "href": "./tl_2026_45_tract.zip",
+      "type": "application/zip",
+      "title": "Census tracts, state FIPS 45",
+      "file:size": 10058341,
+      "updated": "2026-11-19T22:15:29.530864Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_46_bg": {
+      "href": "./tl_2026_46_bg.zip",
+      "type": "application/zip",
+      "title": "Block groups, state FIPS 46",
+      "file:size": 4792060,
+      "updated": "2026-11-19T22:15:36.437947Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_46_place": {
+      "href": "./tl_2026_46_place.zip",
+      "type": "application/zip",
+      "title": "Places, state FIPS 46",
+      "file:size": 818571,
+      "updated": "2026-11-19T22:15:40.771231Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_46_prisecroads": {
+      "href": "./tl_2026_46_prisecroads.zip",
+      "type": "application/zip",
+      "title": "Primary and secondary roads, state FIPS 46",
+      "file:size": 3207380,
+      "updated": "2026-11-19T22:15:46.944704Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_46_tract": {
+      "href": "./tl_2026_46_tract.zip",
+      "type": "application/zip",
+      "title": "Census tracts, state FIPS 46",
+      "file:size": 2854955,
+      "updated": "2026-11-19T22:15:29.579297Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_47_bg": {
+      "href": "./tl_2026_47_bg.zip",
+      "type": "application/zip",
+      "title": "Block groups, state FIPS 47",
+      "file:size": 25413928,
+      "updated": "2026-11-19T22:15:36.849838Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_47_place": {
+      "href": "./tl_2026_47_place.zip",
+      "type": "application/zip",
+      "title": "Places, state FIPS 47",
+      "file:size": 5076262,
+      "updated": "2026-11-19T22:15:41.030138Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_47_prisecroads": {
+      "href": "./tl_2026_47_prisecroads.zip",
+      "type": "application/zip",
+      "title": "Primary and secondary roads, state FIPS 47",
+      "file:size": 14117336,
+      "updated": "2026-11-19T22:15:47.519106Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_47_tract": {
+      "href": "./tl_2026_47_tract.zip",
+      "type": "application/zip",
+      "title": "Census tracts, state FIPS 47",
+      "file:size": 15639284,
+      "updated": "2026-11-19T22:15:29.608931Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_48_bg": {
+      "href": "./tl_2026_48_bg.zip",
+      "type": "application/zip",
+      "title": "Block groups, state FIPS 48",
+      "file:size": 50474000,
+      "updated": "2026-11-19T22:15:38.771759Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_48_place": {
+      "href": "./tl_2026_48_place.zip",
+      "type": "application/zip",
+      "title": "Places, state FIPS 48",
+      "file:size": 9811278,
+      "updated": "2026-11-19T22:15:41.041184Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_48_prisecroads": {
+      "href": "./tl_2026_48_prisecroads.zip",
+      "type": "application/zip",
+      "title": "Primary and secondary roads, state FIPS 48",
+      "file:size": 12181083,
+      "updated": "2026-11-19T22:15:48.010045Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_48_tract": {
+      "href": "./tl_2026_48_tract.zip",
+      "type": "application/zip",
+      "title": "Census tracts, state FIPS 48",
+      "file:size": 32715529,
+      "updated": "2026-11-19T22:15:29.876897Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_49_bg": {
+      "href": "./tl_2026_49_bg.zip",
+      "type": "application/zip",
+      "title": "Block groups, state FIPS 49",
+      "file:size": 8588434,
+      "updated": "2026-11-19T22:15:36.996873Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_49_place": {
+      "href": "./tl_2026_49_place.zip",
+      "type": "application/zip",
+      "title": "Places, state FIPS 49",
+      "file:size": 1654105,
+      "updated": "2026-11-19T22:15:41.365127Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_49_prisecroads": {
+      "href": "./tl_2026_49_prisecroads.zip",
+      "type": "application/zip",
+      "title": "Primary and secondary roads, state FIPS 49",
+      "file:size": 2677816,
+      "updated": "2026-11-19T22:15:47.442211Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_49_tract": {
+      "href": "./tl_2026_49_tract.zip",
+      "type": "application/zip",
+      "title": "Census tracts, state FIPS 49",
+      "file:size": 5612862,
+      "updated": "2026-11-19T22:15:29.721217Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_50_bg": {
+      "href": "./tl_2026_50_bg.zip",
+      "type": "application/zip",
+      "title": "Block groups, state FIPS 50",
+      "file:size": 1836039,
+      "updated": "2026-11-19T22:15:37.196392Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_50_place": {
+      "href": "./tl_2026_50_place.zip",
+      "type": "application/zip",
+      "title": "Places, state FIPS 50",
+      "file:size": 589050,
+      "updated": "2026-11-19T22:15:41.021921Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_50_prisecroads": {
+      "href": "./tl_2026_50_prisecroads.zip",
+      "type": "application/zip",
+      "title": "Primary and secondary roads, state FIPS 50",
+      "file:size": 1891896,
+      "updated": "2026-11-19T22:15:47.152138Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_50_tract": {
+      "href": "./tl_2026_50_tract.zip",
+      "type": "application/zip",
+      "title": "Census tracts, state FIPS 50",
+      "file:size": 790737,
+      "updated": "2026-11-19T22:15:29.710373Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_51_bg": {
+      "href": "./tl_2026_51_bg.zip",
+      "type": "application/zip",
+      "title": "Block groups, state FIPS 51",
+      "file:size": 27375888,
+      "updated": "2026-11-19T22:15:37.672513Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_51_place": {
+      "href": "./tl_2026_51_place.zip",
+      "type": "application/zip",
+      "title": "Places, state FIPS 51",
+      "file:size": 3874793,
+      "updated": "2026-11-19T22:15:41.118311Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_51_prisecroads": {
+      "href": "./tl_2026_51_prisecroads.zip",
+      "type": "application/zip",
+      "title": "Primary and secondary roads, state FIPS 51",
+      "file:size": 10531573,
+      "updated": "2026-11-19T22:15:47.536570Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_51_tract": {
+      "href": "./tl_2026_51_tract.zip",
+      "type": "application/zip",
+      "title": "Census tracts, state FIPS 51",
+      "file:size": 16790991,
+      "updated": "2026-11-19T22:15:29.911541Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_53_bg": {
+      "href": "./tl_2026_53_bg.zip",
+      "type": "application/zip",
+      "title": "Block groups, state FIPS 53",
+      "file:size": 16296084,
+      "updated": "2026-11-19T22:15:38.073080Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_53_place": {
+      "href": "./tl_2026_53_place.zip",
+      "type": "application/zip",
+      "title": "Places, state FIPS 53",
+      "file:size": 2858130,
+      "updated": "2026-11-19T22:15:41.202115Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_53_prisecroads": {
+      "href": "./tl_2026_53_prisecroads.zip",
+      "type": "application/zip",
+      "title": "Primary and secondary roads, state FIPS 53",
+      "file:size": 3918863,
+      "updated": "2026-11-19T22:15:47.481068Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_53_tract": {
+      "href": "./tl_2026_53_tract.zip",
+      "type": "application/zip",
+      "title": "Census tracts, state FIPS 53",
+      "file:size": 9847754,
+      "updated": "2026-11-19T22:15:30.015038Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_54_bg": {
+      "href": "./tl_2026_54_bg.zip",
+      "type": "application/zip",
+      "title": "Block groups, state FIPS 54",
+      "file:size": 15291384,
+      "updated": "2026-11-19T22:15:37.938459Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_54_place": {
+      "href": "./tl_2026_54_place.zip",
+      "type": "application/zip",
+      "title": "Places, state FIPS 54",
+      "file:size": 1656297,
+      "updated": "2026-11-19T22:15:41.148744Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_54_prisecroads": {
+      "href": "./tl_2026_54_prisecroads.zip",
+      "type": "application/zip",
+      "title": "Primary and secondary roads, state FIPS 54",
+      "file:size": 6260969,
+      "updated": "2026-11-19T22:15:48.130176Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_54_tract": {
+      "href": "./tl_2026_54_tract.zip",
+      "type": "application/zip",
+      "title": "Census tracts, state FIPS 54",
+      "file:size": 8020036,
+      "updated": "2026-11-19T22:15:30.011036Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_55_bg": {
+      "href": "./tl_2026_55_bg.zip",
+      "type": "application/zip",
+      "title": "Block groups, state FIPS 55",
+      "file:size": 13913091,
+      "updated": "2026-11-19T22:15:38.452957Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_55_place": {
+      "href": "./tl_2026_55_place.zip",
+      "type": "application/zip",
+      "title": "Places, state FIPS 55",
+      "file:size": 3494669,
+      "updated": "2026-11-19T22:15:41.412912Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_55_prisecroads": {
+      "href": "./tl_2026_55_prisecroads.zip",
+      "type": "application/zip",
+      "title": "Primary and secondary roads, state FIPS 55",
+      "file:size": 5130708,
+      "updated": "2026-11-19T22:15:47.969881Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_55_tract": {
+      "href": "./tl_2026_55_tract.zip",
+      "type": "application/zip",
+      "title": "Census tracts, state FIPS 55",
+      "file:size": 7688074,
+      "updated": "2026-11-19T22:15:30.206492Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_56_bg": {
+      "href": "./tl_2026_56_bg.zip",
+      "type": "application/zip",
+      "title": "Block groups, state FIPS 56",
+      "file:size": 4784626,
+      "updated": "2026-11-19T22:15:37.744831Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_56_place": {
+      "href": "./tl_2026_56_place.zip",
+      "type": "application/zip",
+      "title": "Places, state FIPS 56",
+      "file:size": 898629,
+      "updated": "2026-11-19T22:15:41.355453Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_56_prisecroads": {
+      "href": "./tl_2026_56_prisecroads.zip",
+      "type": "application/zip",
+      "title": "Primary and secondary roads, state FIPS 56",
+      "file:size": 2648693,
+      "updated": "2026-11-19T22:15:48.553293Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_56_tract": {
+      "href": "./tl_2026_56_tract.zip",
+      "type": "application/zip",
+      "title": "Census tracts, state FIPS 56",
+      "file:size": 2799231,
+      "updated": "2026-11-19T22:15:30.143519Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_60_bg": {
+      "href": "./tl_2026_60_bg.zip",
+      "type": "application/zip",
+      "title": "Block groups, state FIPS 60",
+      "file:size": 76151,
+      "updated": "2026-11-19T22:15:37.369604Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_60_place": {
+      "href": "./tl_2026_60_place.zip",
+      "type": "application/zip",
+      "title": "Places, state FIPS 60",
+      "file:size": 82861,
+      "updated": "2026-11-19T22:15:41.301116Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_60_prisecroads": {
+      "href": "./tl_2026_60_prisecroads.zip",
+      "type": "application/zip",
+      "title": "Primary and secondary roads, state FIPS 60",
+      "file:size": 134493,
+      "updated": "2026-11-19T22:15:47.760807Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_60_tract": {
+      "href": "./tl_2026_60_tract.zip",
+      "type": "application/zip",
+      "title": "Census tracts, state FIPS 60",
+      "file:size": 40072,
+      "updated": "2026-11-19T22:15:30.020036Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_66_bg": {
+      "href": "./tl_2026_66_bg.zip",
+      "type": "application/zip",
+      "title": "Block groups, state FIPS 66",
+      "file:size": 748176,
+      "updated": "2026-11-19T22:15:37.782917Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_66_place": {
+      "href": "./tl_2026_66_place.zip",
+      "type": "application/zip",
+      "title": "Places, state FIPS 66",
+      "file:size": 267023,
+      "updated": "2026-11-19T22:15:41.401969Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_66_prisecroads": {
+      "href": "./tl_2026_66_prisecroads.zip",
+      "type": "application/zip",
+      "title": "Primary and secondary roads, state FIPS 66",
+      "file:size": 179034,
+      "updated": "2026-11-19T22:15:48.114584Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_66_tract": {
+      "href": "./tl_2026_66_tract.zip",
+      "type": "application/zip",
+      "title": "Census tracts, state FIPS 66",
+      "file:size": 562646,
+      "updated": "2026-11-19T22:15:30.156693Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_69_bg": {
+      "href": "./tl_2026_69_bg.zip",
+      "type": "application/zip",
+      "title": "Block groups, state FIPS 69",
+      "file:size": 440523,
+      "updated": "2026-11-19T22:15:38.205950Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_69_place": {
+      "href": "./tl_2026_69_place.zip",
+      "type": "application/zip",
+      "title": "Places, state FIPS 69",
+      "file:size": 581374,
+      "updated": "2026-11-19T22:15:41.458206Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_69_prisecroads": {
+      "href": "./tl_2026_69_prisecroads.zip",
+      "type": "application/zip",
+      "title": "Primary and secondary roads, state FIPS 69",
+      "file:size": 41457,
+      "updated": "2026-11-19T22:15:48.296230Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_69_tract": {
+      "href": "./tl_2026_69_tract.zip",
+      "type": "application/zip",
+      "title": "Census tracts, state FIPS 69",
+      "file:size": 382509,
+      "updated": "2026-11-19T22:15:30.383216Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_72_bg": {
+      "href": "./tl_2026_72_bg.zip",
+      "type": "application/zip",
+      "title": "Block groups, state FIPS 72",
+      "file:size": 5958723,
+      "updated": "2026-11-19T22:15:38.886281Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_72_place": {
+      "href": "./tl_2026_72_place.zip",
+      "type": "application/zip",
+      "title": "Places, state FIPS 72",
+      "file:size": 773549,
+      "updated": "2026-11-19T22:15:41.483131Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_72_prisecroads": {
+      "href": "./tl_2026_72_prisecroads.zip",
+      "type": "application/zip",
+      "title": "Primary and secondary roads, state FIPS 72",
+      "file:size": 1129154,
+      "updated": "2026-11-19T22:15:48.488702Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_72_tract": {
+      "href": "./tl_2026_72_tract.zip",
+      "type": "application/zip",
+      "title": "Census tracts, state FIPS 72",
+      "file:size": 3720271,
+      "updated": "2026-11-19T22:15:30.437892Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_78_bg": {
+      "href": "./tl_2026_78_bg.zip",
+      "type": "application/zip",
+      "title": "Block groups, state FIPS 78",
+      "file:size": 495598,
+      "updated": "2026-11-19T22:15:38.727838Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_78_place": {
+      "href": "./tl_2026_78_place.zip",
+      "type": "application/zip",
+      "title": "Places, state FIPS 78",
+      "file:size": 56240,
+      "updated": "2026-11-19T22:15:41.439184Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_78_prisecroads": {
+      "href": "./tl_2026_78_prisecroads.zip",
+      "type": "application/zip",
+      "title": "Primary and secondary roads, state FIPS 78",
+      "file:size": 301840,
+      "updated": "2026-11-19T22:15:48.826476Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_78_tract": {
+      "href": "./tl_2026_78_tract.zip",
+      "type": "application/zip",
+      "title": "Census tracts, state FIPS 78",
+      "file:size": 401327,
+      "updated": "2026-11-19T22:15:30.370214Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_us_aiannh": {
+      "href": "./tl_2026_us_aiannh.zip",
+      "type": "application/zip",
+      "title": "American Indian / Alaska Native / Native Hawaiian areas",
+      "file:size": 9175653,
+      "updated": "2026-11-19T22:15:41.754205Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_us_cbsa": {
+      "href": "./tl_2026_us_cbsa.zip",
+      "type": "application/zip",
+      "title": "Core based statistical areas",
+      "file:size": 34991980,
+      "updated": "2026-11-19T22:15:41.912816Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_us_county": {
+      "href": "./tl_2026_us_county.zip",
+      "type": "application/zip",
+      "title": "Counties and equivalents",
+      "file:size": 83378454,
+      "updated": "2026-11-19T22:15:26.937819Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_us_primaryroads": {
+      "href": "./tl_2026_us_primaryroads.zip",
+      "type": "application/zip",
+      "title": "Primary roads",
+      "file:size": 38486503,
+      "updated": "2026-11-19T22:15:42.117456Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_us_rails": {
+      "href": "./tl_2026_us_rails.zip",
+      "type": "application/zip",
+      "title": "Railroads",
+      "file:size": 33791836,
+      "updated": "2026-11-19T22:15:48.618574Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_us_state": {
+      "href": "./tl_2026_us_state.zip",
+      "type": "application/zip",
+      "title": "States and equivalents",
+      "file:size": 9957057,
+      "updated": "2026-11-19T22:15:26.750248Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_us_uac20": {
+      "href": "./tl_2026_us_uac20.zip",
+      "type": "application/zip",
+      "title": "2020 urban areas",
+      "file:size": 74053106,
+      "updated": "2026-11-19T22:15:42.144470Z",
+      "roles": [
+        "data"
+      ]
+    },
+    "tl_2026_us_zcta520": {
+      "href": "./tl_2026_us_zcta520.zip",
+      "type": "application/zip",
+      "title": "2020 ZIP Code Tabulation Areas",
+      "file:size": 529334982,
+      "updated": "2026-11-19T22:15:44.350535Z",
+      "roles": [
+        "data"
+      ]
+    }
+  }
+}

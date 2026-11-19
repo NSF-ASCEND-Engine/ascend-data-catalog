@@ -1,0 +1,15 @@
+https://zenodo.org/api/records/15529996/files/camels_clim.txt/content camels_clim.txt
+https://zenodo.org/api/records/15529996/files/readme.txt/content readme.txt
+https://zenodo.org/api/records/15529996/files/camels_attributes_v2.0.pdf/content camels_attributes_v2.0.pdf
+https://zenodo.org/api/records/15529996/files/basin_set_full_res.zip/content basin_set_full_res.zip
+https://zenodo.org/api/records/15529996/files/camels_geol.txt/content camels_geol.txt
+https://zenodo.org/api/records/15529996/files/camels_name.txt/content camels_name.txt
+https://zenodo.org/api/records/15529996/files/camels_vege.txt/content camels_vege.txt
+https://zenodo.org/api/records/15529996/files/basin_timeseries_v1p2_metForcing_obsFlow.zip/content basin_timeseries_v1p2_metForcing_obsFlow.zip
+https://zenodo.org/api/records/15529996/files/camels_topo.txt/content camels_topo.txt
+https://zenodo.org/api/records/15529996/files/camels_soil.txt/content camels_soil.txt
+https://zenodo.org/api/records/15529996/files/camels_hydro.txt/content camels_hydro.txt
+https://zenodo.org/api/records/15529996/files/camels_attributes_v2.0.xlsx/content camels_attributes_v2.0.xlsx
+https://zenodo.org/api/records/15529996/files/basin_timeseries_v1p2_modelOutput_daymet.zip/content basin_timeseries_v1p2_modelOutput_daymet.zip
+https://zenodo.org/api/records/15529996/files/basin_timeseries_v1p2_modelOutput_maurer.zip/content basin_timeseries_v1p2_modelOutput_maurer.zip
+https://zenodo.org/api/records/15529996/files/basin_timeseries_v1p2_modelOutput_nldas.zip/content basin_timeseries_v1p2_modelOutput_nldas.zip

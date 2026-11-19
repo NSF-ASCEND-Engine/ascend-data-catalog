@@ -1,0 +1,27 @@
+{
+  "type": "Catalog",
+  "id": "usgs-3dep-derived",
+  "stac_version": "1.1.0",
+  "description": "Products built from `usgs-3dep/raw` by the code in `usgs-3dep/scripts`.",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "cowy shared data"
+    },
+    {
+      "rel": "child",
+      "href": "./USGS_Seamless_DEM_13.json",
+      "type": "application/json",
+      "title": "USGS 3DEP 1/3 arc-second DEM, seamless VRT"
+    },
+    {
+      "rel": "parent",
+      "href": "../../derived.json",
+      "type": "application/json",
+      "title": "Derived"
+    }
+  ],
+  "title": "USGS 3DEP 1/3 arc-second DEM (derived)"
+}

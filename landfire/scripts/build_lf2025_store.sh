@@ -29,7 +29,7 @@
 
 set -euo pipefail
 
-LF="/project/cowy/data/landfire"
+LF="/project/cowy/ascend-data-catalog/landfire"
 SRC="${SRC:-$LF/raw}"
 OUT="${OUT:-$LF/derived/lf2025_fuels_terrain.zarr}"
 VENV="${VENV:-$LF/scripts/.venv}"

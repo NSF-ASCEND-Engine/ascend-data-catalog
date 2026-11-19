@@ -12,3 +12,6 @@
 !*/derived/*.json
 !*/scripts/**
 *.out
+__pycache__/
+!_quarto.yml
+!.github/workflows/*.yml

@@ -23,6 +23,12 @@
       "title": "FEMA USA Structures (derived)"
     },
     {
+      "rel": "child",
+      "href": "./usgs-3dep/derived/catalog.json",
+      "type": "application/json",
+      "title": "USGS 3DEP 1/3 arc-second DEM (derived)"
+    },
+    {
       "rel": "parent",
       "href": "./catalog.json",
       "type": "application/json",

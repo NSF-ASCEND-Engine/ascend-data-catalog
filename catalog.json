@@ -2,7 +2,7 @@
   "type": "Catalog",
   "id": "cowy-data",
   "stac_version": "1.1.0",
-  "description": "Datasets in /project/cowy/data, grouped into raw (vendor files as downloaded) and derived (products built from them); see /project/cowy/data/README.md for layout and owners.",
+  "description": "Datasets in /project/cowy/ascend-data-catalog, grouped into raw (vendor files as downloaded) and derived (products built from them); see /project/cowy/ascend-data-catalog/README.md for layout and owners.",
   "links": [
     {"rel": "root", "href": "./catalog.json", "type": "application/json", "title": "cowy shared data"},
     {"rel": "child", "href": "./raw.json", "type": "application/json", "title": "Raw"},

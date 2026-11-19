@@ -28,7 +28,7 @@ The grid is LF2020's extent, which is larger than LF2025's; LF2025 arrays read a
 import xarray as xr
 from pyproj import Transformer
 
-ds = xr.open_zarr("/project/cowy/data/landfire/derived/lf2025_fuels_terrain.zarr")
+ds = xr.open_zarr("/project/cowy/ascend-data-catalog/landfire/derived/lf2025_fuels_terrain.zarr")
 
 # Clip to a lon/lat box; x/y are EPSG:5070 metres and y decreases downward
 x0, y0, x1, y1 = Transformer.from_crs("EPSG:4326", "EPSG:5070", always_xy=True) \
@@ -46,7 +46,7 @@ Packages: `Zarr`, `Proj`.
 ```julia
 using Zarr, Proj
 
-z = zopen("/project/cowy/data/landfire/derived/lf2025_fuels_terrain.zarr")
+z = zopen("/project/cowy/ascend-data-catalog/landfire/derived/lf2025_fuels_terrain.zarr")
 x, y = z["x"][:], z["y"][:]        # EPSG:5070 cell centres in metres; y decreases
 
 # Clip to a lon/lat box. Zarr.jl reverses the axes, so arrays index as [x, y].
@@ -77,7 +77,7 @@ The binary `blosc` package that `zarr` depends on links to `libblosc.so.1`, whic
 dyn.load("/apps/u/spack/gcc/14.2.0/c-blosc/1.21.5-sqq4isv/lib64/libblosc.so.1")  # needed by zarr's blosc codec
 library(zarr)
 
-z <- open_zarr("/project/cowy/data/landfire/derived/lf2025_fuels_terrain.zarr")
+z <- open_zarr("/project/cowy/ascend-data-catalog/landfire/derived/lf2025_fuels_terrain.zarr")
 x <- z[["/x"]][]   # EPSG:5070 cell centres in metres
 y <- z[["/y"]][]   # decreasing
 

@@ -22,7 +22,7 @@
 
 set -euo pipefail
 
-DS="/project/cowy/data/fema-usa-structures"
+DS="/project/cowy/ascend-data-catalog/fema-usa-structures"
 OUT="${OUT:-$DS/derived/usa_structures.parquet}"
 export PATH="$HOME/.local/bin:$PATH"   # uv
 

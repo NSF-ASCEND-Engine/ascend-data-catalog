@@ -25,7 +25,7 @@
 
 set -euo pipefail
 
-DS="/project/cowy/data/fema-usa-structures"
+DS="/project/cowy/ascend-data-catalog/fema-usa-structures"
 RAW="${RAW:-$DS/raw}"
 URLS="${URLS:-$DS/scripts/urls.txt}"
 JOBS="${SLURM_CPUS_PER_TASK:-8}"
