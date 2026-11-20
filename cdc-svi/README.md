@@ -29,6 +29,41 @@ wy = gpd.read_file(f"zip://{raw}/SVI_2022_US.zip!SVI2022_US_tract.gdb",
                    where="ST_ABBR = 'WY'", columns=["ST_ABBR", "FIPS", "RPL_THEMES"])
 ```
 
+### Julia
+
+Packages: `CSV`, `DataFrames`, `ArchGDAL`.
+
+```julia
+using CSV, DataFrames, ArchGDAL
+
+raw = "/project/cowy/ascend-data-catalog/cdc-svi/raw"
+county = CSV.read("$raw/SVI_2022_US_county.csv", DataFrame; types = Dict(:FIPS => String))
+
+# Tract polygons for one state; geometry is in the `Shape` column
+wy = ArchGDAL.read("/vsizip/$raw/SVI_2022_US.zip/SVI2022_US_tract.gdb") do ds
+    ArchGDAL.executesql(layer -> DataFrame(layer), ds, "SELECT FIPS, RPL_THEMES FROM SVI2022_US_tract WHERE ST_ABBR = 'WY'")
+end
+```
+
+### R
+
+On MedicineBow, load R and the cluster GDAL in every session with `module load arcc/1.0 gcc/15.2.0` then `module load r/4.5.3 gdal/3.13.0 geos/3.14.1 proj/9.7.0`. Install `terra` once into your own library, from source so that it links to the cluster GDAL:
+
+```r
+install.packages("terra", repos = "https://cloud.r-project.org")
+```
+
+```r
+library(terra)
+
+raw <- "/project/cowy/ascend-data-catalog/cdc-svi/raw"
+county <- read.csv(paste0(raw, "/SVI_2022_US_county.csv"), colClasses = c(FIPS = "character"))
+
+# Tract polygons for one state
+wy <- vect(paste0("/vsizip/", raw, "/SVI_2022_US.zip/SVI2022_US_tract.gdb"),
+           query = "SELECT FIPS, RPL_THEMES FROM SVI2022_US_tract WHERE ST_ABBR = 'WY'")
+```
+
 ## Rebuilding
 
 ```sh

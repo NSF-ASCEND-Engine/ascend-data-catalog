@@ -28,6 +28,37 @@ attrs = read("name").merge(read("topo"), on="gauge_id").merge(read("hydro"), on=
 basins = gpd.read_file(f"{raw}/basin_set_full_res.zip")
 ```
 
+### Julia
+
+Packages: `CSV`, `DataFrames`, `GeoDataFrames`.
+
+```julia
+using CSV, DataFrames, GeoDataFrames
+
+raw = "/project/cowy/ascend-data-catalog/camels/raw"
+tbl(name) = CSV.read("$raw/camels_$name.txt", DataFrame; delim = ';', types = Dict(:gauge_id => String))
+attrs = innerjoin(tbl("name"), tbl("topo"), tbl("hydro"); on = :gauge_id)
+basins = GeoDataFrames.read("/vsizip/$raw/basin_set_full_res.zip")
+```
+
+### R
+
+On MedicineBow, load R and the cluster GDAL in every session with `module load arcc/1.0 gcc/15.2.0` then `module load r/4.5.3 gdal/3.13.0 geos/3.14.1 proj/9.7.0`. Install `terra` once into your own library, from source so that it links to the cluster GDAL:
+
+```r
+install.packages("terra", repos = "https://cloud.r-project.org")
+```
+
+```r
+library(terra)
+
+raw <- "/project/cowy/ascend-data-catalog/camels/raw"
+tbl <- function(name) read.csv(sprintf("%s/camels_%s.txt", raw, name), sep = ";",
+                               colClasses = c(gauge_id = "character"))
+attrs <- Reduce(function(a, b) merge(a, b, by = "gauge_id"), lapply(c("name", "topo", "hydro"), tbl))
+basins <- vect(paste0("/vsizip/", raw, "/basin_set_full_res.zip"))
+```
+
 ## Citation
 
 - Time series: Newman et al. (2015), doi:10.5194/hess-19-209-2015.

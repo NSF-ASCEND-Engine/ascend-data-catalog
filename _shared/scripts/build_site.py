@@ -7,6 +7,7 @@ Writes, at the repository root (none of it is tracked):
 
     index.md                one table row and one summary per source
     datasets/<source>.md    the source's STAC summary followed by its README
+    examples.md             every source's Python, Julia and R examples
     layout.md               the root README
 
 Uses only the standard library and reads only tracked files, so it runs in CI
@@ -14,11 +15,14 @@ without the data.
 """
 
 import json
+import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 REPO = "https://github.com/NSF-ASCEND-Engine/ascend-data-catalog"
 PATH = "/project/cowy/ascend-data-catalog"
+# A README's run of `### Python`, `### Julia`, `### R` sections, up to the next `## ` heading.
+EXAMPLES = re.compile(r"\n### Python\n.*?(?=\n## |\Z)", re.S)
 
 
 def load(path):
@@ -73,10 +77,15 @@ def facts(path, collection):
     return "| | |\n|---|---|\n" + "".join(f"| {k} | {v} |\n" for k, v in rows.items() if v)
 
 
+def tabset(match):
+    """The matched example sections as a Quarto tabset, one tab per language."""
+    return f'\n::: {{.panel-tabset group="language"}}\n{match[0]}\n:::\n'
+
+
 def main():
     datasets = ROOT / "datasets"
     datasets.mkdir(exist_ok=True)
-    table, summaries = [], []
+    table, summaries, examples = [], [], []
     for raw_path, raw in children(ROOT / "raw.json"):
         source = raw_path.parents[1].name
         title = raw["title"].replace(" (raw)", "")
@@ -89,6 +98,9 @@ def main():
         for path, collection in derived:
             page += [f"## Derived: {collection['title']}\n", collection["description"] + "\n", facts(path, collection)]
         readme = (ROOT / source / "README.md").read_text().split("\n", 1)[1]  # drop the H1
+        if match := EXAMPLES.search(readme):
+            examples.append(f"## [{title}](datasets/{source}.md)\n{tabset(match)}")
+        readme = EXAMPLES.sub(tabset, readme)
         # Demote the README's headings one level so they nest under this one.
         page += ["## Layout and usage\n", readme.replace("\n### ", "\n#### ").replace("\n## ", "\n### ")]
         (datasets / f"{source}.md").write_text("\n".join(page))
@@ -121,9 +133,18 @@ Shared datasets for NSF ASCEND Engine performers, stored at `{PATH}` on the Medi
 
 {chr(10).join(summaries)}
 """)
+    (ROOT / "examples.md").write_text(f"""---
+title: "Examples"
+---
+
+Reading each dataset from Python, Julia and R on MedicineBow. Each dataset's page describes its files,
+layers and columns.
+
+{chr(10).join(examples)}
+""")
     layout = (ROOT / "README.md").read_text().split("\n", 1)[1]
     (ROOT / "layout.md").write_text('---\ntitle: "Repository layout"\n---\n' + layout)
-    print(f"wrote index.md, layout.md and {len(table)} pages in datasets/")
+    print(f"wrote index.md, examples.md, layout.md and {len(table)} pages in datasets/")
 
 
 if __name__ == "__main__":

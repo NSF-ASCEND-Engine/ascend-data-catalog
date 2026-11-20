@@ -25,6 +25,8 @@ There is no `derived/`. The Archive's other per-state zips repeat the CONUS rast
 
 A CONUS zip holds `<layer>_CONUS/<layer>_CONUS.tif` with its overviews (`.tif.ovr`) and FGDC metadata (`.tif.xml`). The rasters are EPSG:5070, 156335 × 101538, nodata -9999, stored as full-width strips.
 
+Reading through the zip is slow: the GeoTIFFs are deflated inside the zip, so GDAL decompresses from the start of the file to reach a window. A window from `Exposure` (4.6 GB GeoTIFF) takes about 14 s, and the larger layers take longer. For repeated reads, unzip the GeoTIFF to `/gscratch` first.
+
 ### Python
 
 ```python
@@ -38,7 +40,38 @@ with rasterio.open(f"zip://{zip_path}!Exposure_CONUS/Exposure_CONUS.tif") as src
     exposure = src.read(1, window=from_bounds(*box, src.transform), masked=True)
 ```
 
-Reading through the zip is slow: the GeoTIFFs are deflated inside the zip, so GDAL decompresses from the start of the file to reach a window. A window from `Exposure` (4.6 GB GeoTIFF) takes about 14 s, and the larger layers take longer. For repeated reads, unzip the GeoTIFF to `/gscratch` first.
+### Julia
+
+Packages: `Rasters`, `ArchGDAL`, `Proj`.
+
+```julia
+using Rasters, ArchGDAL, Proj
+import Rasters: X, Y, (..)
+
+zipfile = "/project/cowy/ascend-data-catalog/wildfire-risk-to-communities/raw/RDS-2020-0016-2_Exposure_CONUS.zip"
+r = Raster("/vsizip/$zipfile/Exposure_CONUS/Exposure_CONUS.tif"; lazy = true)
+
+trans = Proj.Transformation("EPSG:4326", "EPSG:5070"; always_xy = true)
+(x0, x1), (y0, y1) = Proj.bounds(trans, (-105.6, -105.2), (39.9, 40.2))    # lon/lat
+exposure = read(r[X(x0 .. x1), Y(y0 .. y1)])
+```
+
+### R
+
+On MedicineBow, load R and the cluster GDAL in every session with `module load arcc/1.0 gcc/15.2.0` then `module load r/4.5.3 gdal/3.13.0 geos/3.14.1 proj/9.7.0`. Install `terra` once into your own library, from source so that it links to the cluster GDAL:
+
+```r
+install.packages("terra", repos = "https://cloud.r-project.org")
+```
+
+```r
+library(terra)
+
+zipfile <- "/project/cowy/ascend-data-catalog/wildfire-risk-to-communities/raw/RDS-2020-0016-2_Exposure_CONUS.zip"
+r <- rast(paste0("/vsizip/", zipfile, "/Exposure_CONUS/Exposure_CONUS.tif"))
+box <- project(ext(-105.6, -105.2, 39.9, 40.2), "EPSG:4326", crs(r))    # lon/lat
+exposure <- crop(r, box)
+```
 
 ## Rebuilding
 

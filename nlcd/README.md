@@ -15,6 +15,8 @@ Land cover values are the NLCD classes: 11 open water, 12 perennial ice/snow, 21
 
 The other four Annual NLCD products (`LndChg`, `LndCnf`, `ImpDsc`, `SpcChg`) are not mirrored; they use the same URL pattern as `scripts/urls.txt`. `LndCnf` is about 7.8 GB per year.
 
+A windowed read through the zip takes about 3 s. For many reads of one year, unzip that GeoTIFF to `/gscratch` first.
+
 ### Python
 
 ```python
@@ -28,7 +30,38 @@ with rasterio.open(f"zip:///project/cowy/ascend-data-catalog/nlcd/raw/{name}.zip
     cover = src.read(1, window=from_bounds(*box, src.transform))
 ```
 
-A windowed read through the zip takes about 3 s. For many reads of one year, unzip that GeoTIFF to `/gscratch` first.
+### Julia
+
+Packages: `Rasters`, `ArchGDAL`, `Proj`, `GeoFormatTypes`.
+
+```julia
+using Rasters, ArchGDAL, Proj, GeoFormatTypes
+import Rasters: X, Y, (..)
+
+name = "Annual_NLCD_LndCov_2024_CU_C1V1"
+r = Raster("/vsizip//project/cowy/ascend-data-catalog/nlcd/raw/$name.zip/$name.tif"; lazy = true)
+
+trans = Proj.Transformation(EPSG(4326), crs(r); always_xy = true)
+(x0, x1), (y0, y1) = Proj.bounds(trans, (-105.6, -105.2), (39.9, 40.2))    # lon/lat
+cover = read(r[X(x0 .. x1), Y(y0 .. y1)])
+```
+
+### R
+
+On MedicineBow, load R and the cluster GDAL in every session with `module load arcc/1.0 gcc/15.2.0` then `module load r/4.5.3 gdal/3.13.0 geos/3.14.1 proj/9.7.0`. Install `terra` once into your own library, from source so that it links to the cluster GDAL:
+
+```r
+install.packages("terra", repos = "https://cloud.r-project.org")
+```
+
+```r
+library(terra)
+
+name <- "Annual_NLCD_LndCov_2024_CU_C1V1"
+r <- rast(sprintf("/vsizip//project/cowy/ascend-data-catalog/nlcd/raw/%s.zip/%s.tif", name, name))
+box <- project(ext(-105.6, -105.2, 39.9, 40.2), "EPSG:4326", crs(r))    # lon/lat
+cover <- crop(r, box)       # a categorical raster; freq(cover) counts cells by class name
+```
 
 ## Rebuilding
 

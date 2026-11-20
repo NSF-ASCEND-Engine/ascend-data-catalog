@@ -32,6 +32,36 @@ wy = counties[counties.STATEFP == "56"]
 tracts = gpd.read_file(f"{raw}/tl_2026_56_tract.zip")               # join to other data on GEOID
 ```
 
+### Julia
+
+Packages: `GeoDataFrames`, `DataFrames`.
+
+```julia
+using GeoDataFrames, DataFrames
+
+raw = "/project/cowy/ascend-data-catalog/tiger/raw"
+counties = GeoDataFrames.read("/vsizip/$raw/tl_2026_us_county.zip")     # 3,235 rows
+wy = counties[counties.STATEFP .== "56", :]
+tracts = GeoDataFrames.read("/vsizip/$raw/tl_2026_56_tract.zip")        # join to other data on GEOID
+```
+
+### R
+
+On MedicineBow, load R and the cluster GDAL in every session with `module load arcc/1.0 gcc/15.2.0` then `module load r/4.5.3 gdal/3.13.0 geos/3.14.1 proj/9.7.0`. Install `terra` once into your own library, from source so that it links to the cluster GDAL:
+
+```r
+install.packages("terra", repos = "https://cloud.r-project.org")
+```
+
+```r
+library(terra)
+
+raw <- "/project/cowy/ascend-data-catalog/tiger/raw"
+counties <- vect(paste0("/vsizip/", raw, "/tl_2026_us_county.zip"))     # 3,235 rows
+wy <- counties[counties$STATEFP == "56", ]
+tracts <- vect(paste0("/vsizip/", raw, "/tl_2026_56_tract.zip"))        # join to other data on GEOID
+```
+
 ## Rebuilding
 
 ```sh

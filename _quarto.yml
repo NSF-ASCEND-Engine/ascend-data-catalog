@@ -2,6 +2,7 @@ project:
   type: website
   render:
     - index.md
+    - examples.md
     - layout.md
     - datasets/*.md
 
@@ -12,6 +13,8 @@ website:
     left:
       - href: index.md
         text: Datasets
+      - href: examples.md
+        text: Examples
       - href: layout.md
         text: Repository layout
     tools:
@@ -23,6 +26,7 @@ website:
       - index.md
       - section: Datasets
         contents: datasets/*.md
+      - examples.md
       - layout.md
 
 format:

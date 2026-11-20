@@ -25,6 +25,33 @@ with rasterio.open("/project/cowy/ascend-data-catalog/usgs-3dep/derived/USGS_Sea
     elev = src.read(1, window=window, masked=True)
 ```
 
+### Julia
+
+Packages: `Rasters`, `ArchGDAL`.
+
+```julia
+using Rasters, ArchGDAL
+import Rasters: X, Y, (..)
+
+dem = Raster("/project/cowy/ascend-data-catalog/usgs-3dep/derived/USGS_Seamless_DEM_13.vrt"; lazy = true)
+elev = read(dem[X(-105.6 .. -105.2), Y(39.9 .. 40.2)])     # lon/lat; nodata reads as missing
+```
+
+### R
+
+On MedicineBow, load R and the cluster GDAL in every session with `module load arcc/1.0 gcc/15.2.0` then `module load r/4.5.3 gdal/3.13.0 geos/3.14.1 proj/9.7.0`. Install `terra` once into your own library, from source so that it links to the cluster GDAL:
+
+```r
+install.packages("terra", repos = "https://cloud.r-project.org")
+```
+
+```r
+library(terra)
+
+dem <- rast("/project/cowy/ascend-data-catalog/usgs-3dep/derived/USGS_Seamless_DEM_13.vrt")
+elev <- crop(dem, ext(-105.6, -105.2, 39.9, 40.2))     # lon/lat: xmin, xmax, ymin, ymax
+```
+
 ## Rebuilding
 
 ```sh

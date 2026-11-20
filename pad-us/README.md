@@ -38,6 +38,37 @@ wy = gpd.read_file(gdb, layer="PADUS4_1Fee", where="State_Nm = 'WY'",
                    columns=["State_Nm", "Mang_Name", "Des_Tp", "GAP_Sts", "Pub_Access", "Unit_Nm", "GIS_Acres"])
 ```
 
+### Julia
+
+Packages: `ArchGDAL`, `DataFrames`. About 1 minute for one state.
+
+```julia
+using ArchGDAL, DataFrames
+
+gdb = "/vsizip//project/cowy/ascend-data-catalog/pad-us/raw/PADUS4_1Geodatabase.zip/PADUS4_1Geodatabase.gdb"
+sql = "SELECT Mang_Name, Des_Tp, GAP_Sts, Pub_Access, Unit_Nm, GIS_Acres FROM PADUS4_1Fee WHERE State_Nm = 'WY'"
+wy = ArchGDAL.read(gdb) do ds           # geometry is in the `SHAPE` column
+    ArchGDAL.executesql(layer -> DataFrame(layer), ds, sql)
+end
+```
+
+### R
+
+On MedicineBow, load R and the cluster GDAL in every session with `module load arcc/1.0 gcc/15.2.0` then `module load r/4.5.3 gdal/3.13.0 geos/3.14.1 proj/9.7.0`. Install `terra` once into your own library, from source so that it links to the cluster GDAL:
+
+```r
+install.packages("terra", repos = "https://cloud.r-project.org")
+```
+
+About 2 minutes for one state.
+
+```r
+library(terra)
+
+gdb <- "/vsizip//project/cowy/ascend-data-catalog/pad-us/raw/PADUS4_1Geodatabase.zip/PADUS4_1Geodatabase.gdb"
+wy <- vect(gdb, query = "SELECT Mang_Name, Des_Tp, GAP_Sts, Pub_Access, Unit_Nm, GIS_Acres FROM PADUS4_1Fee WHERE State_Nm = 'WY'")
+```
+
 ## Rebuilding
 
 ```sh

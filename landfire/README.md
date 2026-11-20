@@ -22,6 +22,8 @@ Arrays are named by bare LANDFIRE product code, each 2-D `(y, x)`:
 
 The grid is LF2020's extent, which is larger than LF2025's; LF2025 arrays read as fill in that margin. Nodata is in each array's `_FillValue` (32767 for most int16 layers, -9999 for Elev and Asp; SlpD and SlpP have none). Categorical layers (EVT, FBFM40, FCCS, …) carry LANDFIRE's value-attribute table as a list of row dicts in the array's `attribute_table` attribute. Each array also records its `source_zip` in `raw/`.
 
+1024 × 1024 chunks suit 10–60 km AOI reads; see `scripts/landfire_to_zarr.py` for the chunk-size measurements.
+
 ### Python
 
 ```python
@@ -91,8 +93,6 @@ elev <- z[["/Elev"]][iy, ix]
 tab <- z[["/FBFM40"]]$attribute("attribute_table")
 names <- setNames(sapply(tab, `[[`, "FBFM40"), sapply(tab, `[[`, "VALUE"))
 ```
-
-1024 × 1024 chunks suit 10–60 km AOI reads; see `scripts/landfire_to_zarr.py` for the chunk-size measurements.
 
 ## Rebuilding
 

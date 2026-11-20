@@ -17,6 +17,8 @@ Rows are grouped by state and Hilbert-sorted within each state, and each row has
 
 Common columns: `OCC_CLS` and `PRIM_OCC` (occupancy class and type), `PROP_ADDR`, `PROP_CITY`, `PROP_ST` (state name), `PROP_ZIP`, `FIPS`, `HEIGHT`, `SQMETERS`, `SQFEET`, `H_ADJ_ELEV` / `L_ADJ_ELEV` (adjacent ground elevation), `POP_MEDIAN` with `POP_CI95_LOWER` / `POP_CI95_UPPER` (null outside residential occupancy), `IMAGE_DATE`, `BUILD_ID`, `UUID`, `geometry` (WKB polygon). Definitions for every column are in `derived/usa_structures.json` under `table:columns`.
 
+Alaska's footprints span the antimeridian, so a bbox query there needs two boxes, one on each side of ±180°.
+
 ### Python
 
 ```python
@@ -83,8 +85,6 @@ wy <- open_dataset(path) |>
     select(OCC_CLS, HEIGHT, SQMETERS) |>
     collect()
 ```
-
-Alaska's footprints span the antimeridian, so a bbox query there needs two boxes, one on each side of ±180°.
 
 ## Rebuilding
 
